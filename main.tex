@@ -1,0 +1,75 @@
+\documentclass{report}
+% \documentclass{article}
+\include{defs}
+
+% generate word count text file wc.tex
+\immediate\write18{bash wc.sh}
+
+\begin{document}
+
+% title page
+\input{titlepage.tex}
+
+% preface
+% \input{sections/0-preface}
+
+% roman numbering for abstract, TOC, glossary etc.
+\pagenumbering{roman}
+
+% abstract
+\clearpage
+\begin{abstract}
+\input{chapters/abstract/abstract.tex}
+\end{abstract}
+
+% table of contents
+\clearpage
+\tableofcontents
+
+% workload distribution
+\clearpage
+
+\input{chapters/acknowledgements/acknowledgements.tex}
+
+\addcontentsline{toc}{section}{Acknowledgments}
+
+% glossary & acronyms
+\clearpage
+\addcontentsline{toc}{section}{Acronyms and Terms}
+\printglossary[type=acronym, title=Acronyms, style=mcolindex]
+\printglossary[type=main, title=Terms]
+
+% main document
+\clearpage
+\pagenumbering{arabic}
+\glsresetall
+
+\pagebreak
+\input{chapters/example/example.tex}
+
+\pagebreak
+\input{chapters/introduction/introduction.tex}
+
+\pagebreak
+\input{chapters/problem1/problem1.tex}
+
+\pagebreak
+\input{chapters/problem2/problem2.tex}
+
+\pagebreak
+\input{chapters/discussion/discussion.tex}
+
+\pagebreak
+\input{chapters/conclusion/conclusion.tex}
+
+% bibliography
+\pagebreak
+% \printbibliography[heading=bibintoc]
+\begin{multicols}{2}[\printbibheading]
+\printbibliography[heading=none]
+\end{multicols}
+
+\appendix
+\input{chapters/appendix/appendix.tex}
+
+\end{document}

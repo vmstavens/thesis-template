@@ -1,0 +1,1 @@
+untex -i -e -a -o -u -g -m main.tex | wc -w > wc.tex

@@ -1,0 +1,423 @@
+% comprehensive review
+@misc{a-comprehensive-survey-on-point-cloud-registration,
+  title         = {A comprehensive survey on point cloud registration}, 
+  author        = {Xiaoshui Huang and Guofeng Mei and Jian Zhang and Rana Abbas},
+  year          = {2021},
+  eprint        = {2103.02690},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
+}
+
+
+%% purely dl based approaches %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% hand pose estimation
+@misc{hands-deep-in-deep-learning-for-hand-pose-estimation,
+  title         = {Hands Deep in Deep Learning for Hand Pose Estimation},
+  author        = {Markus Oberweger and Paul Wohlhart and Vincent Lepetit},
+  year          = {2016},
+  eprint        = {1502.06807},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV}
+}
+
+% human pose estimation
+@inproceedings{deeppose:-human-pose-estimation-via-deep-neural-networks,
+  title     = {DeepPose: Human Pose Estimation via Deep Neural Networks},
+  author    = {Alexander Toshev and Christian Szegedy},
+  year      = {2014},
+  booktitle = {Computer Vision and Pattern Recognition}
+}
+
+% pose estimate any body part
+﻿@article{deeplabcut:-markerless-pose-estimation-of-user-defined-body-parts-with-deep-learning,
+  author   = {Mathis, Alexander
+              and Mamidanna, Pranav
+              and Cury, Kevin M.
+              and Abe, Taiga
+              and Murthy, Venkatesh N.
+              and Mathis, Mackenzie Weygandt
+              and Bethge, Matthias},
+  title    = {DeepLabCut: markerless pose estimation of user-defined body parts with deep learning},
+  journal  = {Nature Neuroscience},
+  year     = {2018},
+  month    = {9},
+  day      = {01},
+  volume   = {21},
+  number   = {9},
+  pages    = {1281-1289},
+  abstract = {Quantifying behavior is crucial for many applications in neuroscience. Videography provides easy methods for the observation and recording of animal behavior in diverse settings, yet extracting particular aspects of a behavior for further analysis can be highly time consuming. In motor control studies, humans or other animals are often marked with reflective markers to assist with computer-based tracking, but markers are intrusive, and the number and location of the markers must be determined a priori. Here we present an efficient method for markerless pose estimation based on transfer learning with deep neural networks that achieves excellent results with minimal training data. We demonstrate the versatility of this framework by tracking various body parts in multiple species across a broad collection of behaviors. Remarkably, even when only a small number of frames are labeled ({\textasciitilde}200), the algorithm achieves excellent tracking performance on test frames that is comparable to human accuracy.},
+  issn     = {1546-1726},
+  doi      = {10.1038/s41593-018-0209-y},
+  url      = {https://doi.org/10.1038/s41593-018-0209-y}
+}
+
+% cross source methods %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@ARTICLE{a-systematic-approach-for-cross-source-point-cloud-registration-by-preserving-macro-and-micro-structures,
+  author  = {Huang, Xiaoshui and Zhang, Jian and Fan, Lixin and Wu, Qiang and Yuan, Chun},
+  journal = {IEEE Transactions on Image Processing}, 
+  title   = {A Systematic Approach for Cross-Source Point Cloud Registration by Preserving Macro and Micro Structures}, 
+  year    = {2017},
+  volume  = {26},
+  number  = {7},
+  pages   = {3261-3276},
+  doi     = {10.1109/TIP.2017.2695888}
+}
+
+@ARTICLE{a-coarse-to-fine-algorithm-for-matching-and-registration-in-3d-cross-source-point-clouds,
+  author  = {Huang, Xiaoshui and Zhang, Jian and Wu, Qiang and Fan, Lixin and Yuan, Chun},
+  journal = {IEEE Transactions on Circuits and Systems for Video Technology}, 
+  title   = {A Coarse-to-Fine Algorithm for Matching and Registration in 3D Cross-Source Point Clouds}, 
+  year    = {2018},
+  volume  = {28},
+  number  = {10},
+  pages   = {2965-2977},
+  doi     = {10.1109/TCSVT.2017.2730232}
+}
+
+%  same source %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% end-to-end learning %%%%%%%%%%%%%
+
+% dl to finish missing pieces of point cloud
+@inproceedings{extreme-relative-pose-estimation-for-rgb-d-scans-via-scene-completion,
+  author = {Yang, Zhenpei and Pan, Jeffrey and Luo, Linjie and Zhou, Xiaowei and Grauman, Kristen and Huang, Qixing},
+  year   = {2019},
+  month  = {06},
+  pages  = {4526-4535},
+  title  = {Extreme Relative Pose Estimation for RGB-D Scans via Scene Completion},
+  doi    = {10.1109/CVPR.2019.00466}
+}
+
+% dl to learn registration patterns as parametric functions
+@misc{non-rigid-point-set-registration-networks,
+  title         = {Non-Rigid Point Set Registration Networks},
+  author        = {Lingjing Wang and Jianchun Chen and Xiang Li and Yi Fang},
+  year          = {2019},
+  eprint        = {1904.01428},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.GR}
+}
+
+% feature-metric approach
+@misc{feature-metric-registration:-a-fast-semi-supervised-approach-for-robust-point-cloud-registration-without-correspondences,
+  title         = {Feature-metric Registration: A Fast Semi-supervised Approach for Robust Point Cloud Registration without Correspondences},
+  author        = {Xiaoshui Huang and Guofeng Mei and Jian Zhang},
+  year          = {2020},
+  eprint        = {2005.01014},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV}
+}
+
+% freature-learning %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Learning Local Geometric Descriptors from RGB-D Reconstructions
+@misc{3dmatch:-learning-local-geometric-descriptors-from-rgb-d-reconstructions,
+  title         = {3DMatch: Learning Local Geometric Descriptors from RGB-D Reconstructions},
+  author        = {Andy Zeng and Shuran Song and Matthias Nießner and Matthew Fisher and Jianxiong Xiao and Thomas Funkhouser},
+  year          = {2017},
+  eprint        = {1603.08182},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV}
+}
+
+% Global Context Aware Local Features
+@misc{ppfnet:-global-context-aware-local-features-for-robust-3d-point-matching,
+  title         = {PPFNet: Global Context Aware Local Features for Robust 3D Point Matching},
+  author        = {Haowen Deng and Tolga Birdal and Slobodan Ilic},
+  year          = {2018},
+  eprint        = {1802.02669},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV}
+}
+
+% siamese deep learning architectures which use convolutional layers through a voxelized smoothed density value (SDV) representation
+@misc{the-perfect-match:-3d-point-cloud-matching-with-smoothed-densities,
+  title         = {The Perfect Match: 3D Point Cloud Matching with Smoothed Densities},
+  author        = {Zan Gojcic and Caifa Zhou and Jan D. Wegner and Andreas Wieser},
+  year          = {2019},
+  eprint        = {1811.06879},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV}
+}
+
+% optimization-based approach %%%%%%%%%%%%%%%%%%%%%%%%
+
+% icp based approaches %%%%%%%%%%%%%%%
+
+% first icp paper
+@article{a-method-for-registration-of-3-d-shapes,
+  title   = {A Method for Registration of 3-D Shapes},
+  author  = {Paul J. Besl and Neil D. McKay},
+  journal = {IEEE Trans. Pattern Anal. Mach. Intell.},
+  year    = {1992},
+  volume  = {14},
+  pages   = {239-256}
+}
+
+% point-to-plane
+@article{object-modelling-by-registration-of-multiple-range-images,
+  title    = {Object modelling by registration of multiple range images},
+  journal  = {Image and Vision Computing},
+  volume   = {10},
+  number   = {3},
+  pages    = {145-155},
+  year     = {1992},
+  note     = {Range Image Understanding},
+  issn     = {0262-8856},
+  doi      = {https://doi.org/10.1016/0262-8856(92)90066-C},
+  url      = {https://www.sciencedirect.com/science/article/pii/026288569290066C},
+  author   = {Yang Chen and Gérard Medioni},
+  keywords = {object modelling, 3D surface registration, range image registration},
+  abstract = {We study the problem of creating a complete model of a physical object. Although this may be possible using intensity images, we here use images which directly provide access to three dimensional information. The first problem that we need to solve is to find the transformation between the different views. Previous approaches either assume this transformation to be known (which is extremely difficult for a complete model), or compute it with feature matching (which is not accurate enough for integration). In this paper, we propose a new approach which works on range data directly and registers successive views with enough overlapping area to get an accurate transformation between views. This is performed by minimizing a functional which does not require point-to-point matches. We give the details of the registration method and modelling procedure and illustrate them on real range images of complex objects.}
+}
+
+% plane-to-plane Generalized-ICP algorithm
+@inproceedings{generalized-icp,
+  author  = {Segal, Aleksandr and Hähnel, Dirk and Thrun, Sebastian},
+  year    = {2009},
+  month   = {06},
+  pages   = {},
+  title   = {Generalized-ICP},
+  journal = {Proc. of Robotics: Science and Systems},
+  doi     = {10.15607/RSS.2009.V.021}
+}
+
+% modern icp method
+@article{improved-iterative-closest-point-icp-3d-point-cloud-registration-algorithm-based-on-point-cloud-filtering-and-adaptive-fireworks-for-coarse-registration,
+  author    = {Xiaojing Shi and Tao Liu and Xie Han},
+  title     = {Improved Iterative Closest Point(ICP) 3D point cloud registration algorithm based on point cloud filtering and adaptive fireworks for coarse registration},
+  journal   = {International Journal of Remote Sensing},
+  volume    = {41},
+  number    = {8},
+  pages     = {3197-3220},
+  year      = {2020},
+  publisher = {Taylor & Francis},
+  doi       = {10.1080/01431161.2019.1701211},
+  url       = {https://doi.org/10.1080/01431161.2019.1701211},
+  eprint    = {https://doi.org/10.1080/01431161.2019.1701211}
+}
+
+% graph based approaches %%%%%%%%%%%%%%%
+
+% big review on graph based pcr
+@article{a-review-of-point-set-registration:-from-pairwise-registration-to-groupwise-registration,
+  title    = {A Review of Point Set Registration: From Pairwise Registration to Groupwise Registration},
+  author   = {Zhu, Hao and Guo, Bin and Zou, Ke and Li, Yongfu and Yuen, Ka-Veng and Mihaylova, Lyudmila and Leung, Henry},
+  abstract = {This paper presents a comprehensive literature review on point set registration. The state-of-the-art modeling methods and algorithms for point set registration are discussed and summarized. Special attention is paid to methods for pairwise registration and groupwise registration. Some of the most prominent representative methods are selected to conduct qualitative and quantitative experiments. From the experiments we have conducted on 2D and 3D data, CPD-GL pairwise registration algorithm and JRMPC groupwise registration algorithm seem to outperform their rivals both in accuracy and computational complexity. Furthermore, future research directions and avenues in the area are identified.},
+  journal  = {Sensors (Basel)},
+  volume   = {19},
+  number   = {5},
+  month    = {03},
+  year     = {2019},
+  address  = {Switzerland},
+  keywords = {groupwise registration; pairwise registration; point set registration},
+  language = {en}
+}
+
+@article{the-graph-matching-problem,
+  author     = {Livi, Lorenzo and Rizzi, Antonello},
+  title      = {The Graph Matching Problem},
+  year       = {2013},
+  issue_date = {August    2013},
+  publisher  = {Springer-Verlag},
+  address    = {Berlin, Heidelberg},
+  volume     = {16},
+  number     = {3},
+  issn       = {1433-7541},
+  url        = {https://doi.org/10.1007/s10044-012-0284-8},
+  doi        = {10.1007/s10044-012-0284-8},
+  abstract   = {In this paper, we propose a survey concerning the state of the art of the graph matching problem, conceived as the most important element in the definition of inductive inference engines in graph-based pattern recognition applications. We review both methodological and algorithmic results, focusing on inexact graph matching procedures. We consider different classes of graphs that are roughly differentiated considering the complexity of the defined labels for both vertices and edges. Emphasis will be given to the understanding of the underlying methodological aspects of each identified research branch. A selection of inexact graph matching algorithms is proposed and synthetically described, aiming at explaining some significant instances of each graph matching methodology mainly considered in the technical literature.},
+  journal    = {Pattern Anal. Appl.},
+  month      = {08},
+  pages      = {253-283},
+  numpages   = {31},
+  keywords   = {Graph embedding, Graph edit distance, Graph-based pattern recognition, Inexact graph matching, Graph kernels}
+}
+
+@inproceedings{probabilistic-subgraph-matching-based-on-convex-relaxation,
+  author    = {Schellewald, Christian and Schn\"{o}rr, Christoph},
+  title     = {Probabilistic Subgraph Matching Based on Convex Relaxation},
+  year      = {2005},
+  isbn      = {3540302875},
+  publisher = {Springer-Verlag},
+  address   = {Berlin, Heidelberg},
+  url       = {https://doi.org/10.1007/11585978_12},
+  doi       = {10.1007/11585978_12},
+  abstract  = {We present a novel approach to the matching of subgraphs for object recognition in computer vision. Feature similarities between object model and scene graph are complemented with a regularization term that measures differences of the relational structure. For the resulting quadratic integer program, a mathematically tight relaxation is derived by exploiting the degrees of freedom of the embedding space of positive semidefinite matrices. We show that the global minimum of the relaxed convex problem can be interpreted as probability distribution over the original space of matching matrices, providing a basis for efficiently sampling all close-to-optimal combinatorial matchings within the original solution space. As a result, the approach can even handle completely ambiguous situations, despite uniqueness of the relaxed convex problem. Exhaustive numerical experiments demonstrate the promising performance of the approach which – up to a single inevitable regularization parameter that weights feature similarity against structural similarity – is free of any further tuning parameters.},
+  booktitle = {Proceedings of the 5th International Conference on Energy Minimization Methods in Computer Vision and Pattern Recognition},
+  pages     = {171-186},
+  numpages  = {16},
+  location  = {St. Augustine, FL},
+  series    = {EMMCVPR'05}
+}
+
+@inproceedings{probabilistic-graph-and-hypergraph-matching,
+  author    = {Zass, Ron and Shashua, Amnon},
+  booktitle = {2008 IEEE Conference on Computer Vision and Pattern Recognition},
+  title     = {Probabilistic graph and hypergraph matching},
+  year      = {2008},
+  volume    = {},
+  number    = {},
+  pages     = {1-8},
+  doi       = {10.1109/CVPR.2008.4587500}
+}
+
+@article{a-tensor-based-algorithm-for-high-order-graph-matching,
+  author  = {Duchenne, Olivier and Bach, Francis and Kweon, In-So and Ponce, Jean},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  title   = {A Tensor-Based Algorithm for High-Order Graph Matching},
+  year    = {2011},
+  volume  = {33},
+  number  = {12},
+  pages   = {2383-2395},
+  doi     = {10.1109/TPAMI.2011.110}
+}
+
+% FGM
+@article{factorized-graph-matching,
+  author  = {Zhou, Feng and De la Torre, Fernando},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  title   = {Factorized Graph Matching},
+  year    = {2016},
+  volume  = {38},
+  number  = {9},
+  pages   = {1774-1789},
+  doi     = {10.1109/TPAMI.2015.2501802}
+}
+
+% spectral graph
+@article{a-spectral-technique-for-correspondence-problems-using-pairwise-constraints,
+  title   = {A spectral technique for correspondence problems using pairwise constraints},
+  author  = {Marius Leordeanu and Martial Hebert},
+  journal = {Tenth IEEE International Conference on Computer Vision (ICCV'05) Volume 1},
+  year    = {2005},
+  volume  = {2},
+  pages   = {1482-1489 Vol. 2}
+}
+
+% design a probabilistic approach to solve the high-order graph-matching problem
+@inproceedings{probabilistic-graph-and-hypergraph-matching,
+  author  = {Zass, Ron and Shashua, Amnon},
+  year    = {2008},
+  month   = {06},
+  pages   = {},
+  title   = {Probabilistic graph and hypergraph matching},
+  journal = {CVPR},
+  doi     = {10.1109/CVPR.2008.4587500}
+}
+
+% suggests an elastic net to control the trade-off between the sparsity and accuracy of the matching results by incorporating the Elastic-Net constraint into the tensor-based graph matching mode
+@article{elastic-net-constraint-based-tensor-model-for-high-order-graph-matching,
+  author  = {Zhu, Hu and Cui, Chunfeng and Deng, Lizhen and Cheung, Ray C. C. and Yan, Hong},
+  journal = {IEEE Transactions on Cybernetics},
+  title   = {Elastic Net Constraint-Based Tensor Model for High-Order Graph Matching},
+  year    = {2021},
+  volume  = {51},
+  number  = {8},
+  pages   = {4062-4074},
+  doi     = {10.1109/TCYB.2019.2936176}
+}
+
+% gmm based methods %%%%%%%%%%%%%%%%%
+
+% book on CPD
+@book{information-retrieval-for-music-and-motion,
+  author  = {Müller, Meinard},
+  year    = {2007},
+  month   = {01},
+  pages   = {},
+  title   = {Information Retrieval for Music and Motion},
+  isbn    = {978-3-540-74047-6},
+  journal = {Information Retrieval for Music and Motion},
+  doi     = {10.1007/978-3-540-74048-3}
+}
+
+% convex hull and gaussian mixture model
+@article{convex-hull-indexed-gaussian-mixture-model-ch-gmm-for-3d-point-set-registration,
+  title    = {Convex hull indexed Gaussian mixture model (CH-GMM) for 3D point set registration},
+  journal  = {Pattern Recognition},
+  volume   = {59},
+  pages    = {126-141},
+  year     = {2016},
+  note     = {Compositional Models and Structured Learning for Visual Recognition},
+  issn     = {0031-3203},
+  doi      = {https://doi.org/10.1016/j.patcog.2016.02.023},
+  url      = {https://www.sciencedirect.com/science/article/pii/S0031320316000947},
+  author   = {Jingfan Fan and Jian Yang and Danni Ai and Likun Xia and Yitian Zhao and Xing Gao and Yongtian Wang},
+  keywords = {Convex hull, Gaussian mixture model, Point sets, Non-rigid registration},
+  abstract = {To solve the problem of rigid/non-rigid 3D point set registration, a novel convex hull indexed Gaussian mixture model (CH-GMM) is proposed in this paper. The model works by computing a weighted Gaussian mixture model (GMM) response over the convex hull of each point set. Three conditions, proximity, area conservation and projection consistency, are incorporated into the model so as to improve its performance. Given that the convex hull is the tightest convex set of a point set, the combination of Gaussian mixture and convex hull can effectively preserve the topological structure of a point set. Furthermore, computational complexity can be significantly reduced since only the GMM of the convex hull (instead of the whole point set) needs to be calculated. Rigid registration is achieved by seeking the best rigid transformation parameters yielding the most similar CH-GMM responses. Non-rigid deformation is realized by optimizing the coordinates of the control points used by the thin-plate spline model for interpolating the entire point set. Experiments are designed to evaluate a method׳s robustness to rotational changes between two point sets, positional noise, differences in density and partial overlap. The results demonstrated better robustness and registration accuracy of CH-GMM based method over state-of-the-art methods including iterative closest point, coherent point drift and the GMM method. Besides, the computation of CH-GMM is efficient.}
+}
+
+% Joint Registration of Multiple Point Sets
+@inproceedings{a-generative-model-for-the-joint-registration-of-multiple-point-sets,
+  author    = {Evangelidis, Georgios D. and Kounades-Bastian, Dionyssos and Horaud, Radu and Psarakis, Emmanouil Z.},
+  editor    = {Fleet, David and Pajdla, Tomas and Schiele, Bernt and Tuytelaars, Tinne},
+  title     = {A Generative Model for the Joint Registration of Multiple Point Sets},
+  booktitle = {Computer Vision -- ECCV 2014},
+  year      = {2014},
+  publisher = {Springer International Publishing},
+  address   = {Cham},
+  pages     = {109--122},
+  abstract  = {This paper describes a probabilistic generative model and its associated algorithm to jointly register multiple point sets. The vast majority of state-of-the-art registration techniques select one of the sets as the ``model'' and perform pairwise alignments between the other sets and this set. The main drawback of this mode of operation is that there is no guarantee that the model-set is free of noise and outliers, which contaminates the estimation of the registration parameters. Unlike previous work, the proposed method treats all the point sets on an equal footing: they are realizations of a Gaussian mixture (GMM) and the registration is cast into a clustering problem. We formally derive an EM algorithm that estimates both the GMM parameters and the rotations and translations that map each individual set onto the ``central'' model. The mixture means play the role of the registered set of points while the variances provide rich information about the quality of the registration. We thoroughly validate the proposed method with challenging datasets, we compare it with several state-of-the-art methods, and we show its potential for fusing real depth data.},
+  isbn      = {978-3-319-10584-0}
+}
+
+% Deep Gaussian Mixture Registration (DeepGMR)
+@misc{deepgmr:-learning-latent-gaussian-mixture-models-for-registration,
+  title         = {DeepGMR: Learning Latent Gaussian Mixture Models for Registration},
+  author        = {Wentao Yuan and Ben Eckart and Kihwan Kim and Varun Jampani and Dieter Fox and Jan Kautz},
+  year          = {2020},
+  eprint        = {2008.09088},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV}
+}
+
+% semidefinite programming based %%%%%%%%%%%
+
+% teaser
+@ARTICLE{teaser:-fast-and-certifiable-point-cloud-registration,
+  author={Yang, Heng and Shi, Jingnan and Carlone, Luca},
+  journal={IEEE Transactions on Robotics}, 
+  title={TEASER: Fast and Certifiable Point Cloud Registration}, 
+  year={2021},
+  volume={37},
+  number={2},
+  pages={314-333},
+  doi={10.1109/TRO.2020.3033695}
+}
+
+% iron
+@misc{iron:-invariant-based-highly-robust-point-cloud-registration,
+  title         = {IRON: Invariant-based Highly Robust Point Cloud Registration},
+  author        = {Lei Sun},
+  year          = {2021},
+  eprint        = {2103.04357},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV}
+}
+
+% rcqp
+@inproceedings{convex-global-3d-registration-with-lagrangian-duality,
+  author    = {Briales, Jesus and Gonzalez-Jimenez, Javier},
+  title     = {Convex Global 3D Registration With Lagrangian Duality},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month     = {07},
+  year      = {2017}
+}
+
+% gnc
+@article{graduated-non-convexity-for-robust-spatial-perception:-from-non-minimal-solvers-to-global-outlier-rejection,
+  doi       = {10.1109/lra.2020.2965893},
+  url       = {https://doi.org/10.1109%2Flra.2020.2965893},
+  year      = {2020},
+  month     = {04},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  volume    = {5},
+  number    = {2},
+  pages     = {1127--1134},
+  author    = {Heng Yang and Pasquale Antonante and Vasileios Tzoumas and Luca Carlone},
+  title     = {Graduated Non-Convexity for Robust Spatial Perception: From Non-Minimal Solvers to Global Outlier Rejection},
+  journal   = {{IEEE} Robotics and Automation Letters}
+}

@@ -2,7 +2,7 @@
 % \documentclass{article}
 \include{defs}
 
-% generate word count text file wc.tex
+% generate word count text file wc.tex - This is only applied after compiling the document: i.e. $ pdflatex main.tex
 \immediate\write18{bash wc.sh}
 
 \begin{document}
@@ -44,32 +44,48 @@
 \pagenumbering{arabic}
 \glsresetall
 
-\pagebreak
-\input{chapters/example/example.tex}
+% \pagebreak
+% \input{chapters/example/example.tex}
 
 \pagebreak
 \input{chapters/introduction/introduction.tex}
 
 \pagebreak
-\input{chapters/problem1/problem1.tex}
+\input{chapters/system-setup/system-setup.tex}
 
 \pagebreak
-\input{chapters/problem2/problem2.tex}
+\input{chapters/state-of-the-art/state-of-the-art.tex}
 
 \pagebreak
-\input{chapters/discussion/discussion.tex}
+\input{chapters/modeling/modeling.tex}
 
 \pagebreak
-\input{chapters/conclusion/conclusion.tex}
+\input{chapters/1-tactile-perception/1-tactile-perception.tex}
+
+\pagebreak
+\input{chapters/2-pose-estimation/2-pose-estimation.tex}
+
+\pagebreak
+\input{chapters/3-in-hand-manipulation/3-in-hand-manipulation.tex}
+
+\pagebreak
+\input{chapters/discussion-conclusion/discussion-conclusion.tex}
+
+% \pagebreak
+% \input{chapters/conclusion/conclusion.tex}
 
 % bibliography
 \pagebreak
-% \printbibliography[heading=bibintoc]
-\begin{multicols}{2}[\printbibheading]
-\printbibliography[heading=none]
-\end{multicols}
+% \printbibliography[heading=bibintoc
+% \begin{multicols}{2}[\printbibheading]
+% \printbibliography[heading=none]
+% \end{multicols}
+\printbibliography
+
+\newpage
 
 \appendix
+
 \input{chapters/appendix/appendix.tex}
 
 \end{document}

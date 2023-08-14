@@ -1,1 +1,1 @@
-# thesis-template
+# master-thesis

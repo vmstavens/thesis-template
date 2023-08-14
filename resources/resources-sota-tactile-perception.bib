@@ -1,0 +1,598 @@
+
+%% intro %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% groupings of soft finger methods
+@article{a-modified-elastic-foundation-contact-model-for-application-in-3d-models-of-the-prosthetic-knee,
+	title    = {A modified elastic foundation contact model for application in 3D models of the prosthetic knee},
+	journal  = {Medical Engineering \& Physics},
+	volume   = {30},
+	number   = {3},
+	pages    = {387-398},
+	year     = {2008},
+	issn     = {1350-4533},
+	doi      = {https://doi.org/10.1016/j.medengphy.2007.04.001},
+	url      = {https://www.sciencedirect.com/science/article/pii/S1350453307000616},
+	author   = {Antonio Pérez-González and Carlos Fenollosa-Esteve and Joaquín L. Sancho-Bru and Francisco T. Sánchez-Marín and Margarita Vergara and Pablo J. Rodríguez-Cervantes},
+	keywords = {Biomechanics, Contact model, Comparison of contact models, Knee simulation, Prosthetic knee},
+	abstract = {Different models have been used in the literature for the simulation of surface contact in biomechanical knee models. However, there is a lack of systematic comparisons of these models applied to the simulation of a common case, which will provide relevant information about their accuracy and suitability for application in models of the implanted knee. In this work a comparison of the Hertz model (HM), the elastic foundation model (EFM) and the finite element model (FEM) for the simulation of the elastic contact in a 3D model of the prosthetic knee is presented. From the results of this comparison it is found that although the nature of the EFM offers advantages when compared with that of the HM for its application to realistic prosthetic surfaces, and when compared with the FEM in CPU time, its predictions can differ from FEM in some circumstances. These differences are considerable if the comparison is performed for prescribed displacements, although they are less important for prescribed loads. To solve these problems a new modified elastic foundation model (mEFM) is proposed that maintains basically the simplicity of the original model while producing much more accurate results. In this paper it is shown that this new mEFM calculates pressure distribution and contact area with accuracy and short computation times for toroidal contacting surfaces. Although further work is needed to confirm its validity for more complex geometries the mEFM is envisaged as a good option for application in 3D knee models to predict prosthetic knee performance.}
+}
+
+% AEBM models %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Hertx contact model - basic
+@article{on-the-contact-of-rigid-elastic-solids-and-on-hardness,
+	added-at  = {2012-03-17T12:08:41.000+0100},
+	author    = {Hertz, H},
+	biburl    = {https://www.bibsonomy.org/bibtex/215eafad06cbb4f97202d1f56b9f034a3/beaelp},
+	city      = {New York},
+	interhash = {3052fc10f6439d4ed8efeb3897bed140},
+	intrahash = {15eafad06cbb4f97202d1f56b9f034a3},
+	journal   = {Ch 6: Assorted Papers},
+	keywords  = {imported},
+	publisher = {MacMillan},
+	timestamp = {2012-03-17T12:15:43.000+0100},
+	title     = {On the Contact of Rigid Elastic Solids and on Hardness},
+	year      = 1882
+}
+
+% AEBM extend linear to nonlinear 
+@article{modeling-of-contact-mechanics-and-friction-limit-surfaces-for-soft-fingers-in-robotics-with-experimental-results,
+	author   = {Nicholas Xydas and Imin Kao},
+	title    = {Modeling of Contact Mechanics and Friction Limit Surfaces for Soft Fingers in Robotics, with Experimental Results},
+	journal  = {The International Journal of Robotics Research},
+	volume   = {18},
+	number   = {9},
+	pages    = {941-950},
+	year     = {1999},
+	doi      = {10.1177/02783649922066673},
+	url      = {https://doi.org/10.1177/02783649922066673},
+	eprint   = {https://doi.org/10.1177/02783649922066673},
+	abstract = { A new theory in contact mechanics for modeling of soft fingers is proposed to define the relationship between the normal force and the radius of contact for soft fingers by considering general soft-finger materials, including linearly and nonlinearly elastic materials. The results show that the radius of contact is proportional to the normal force raised to the power of, which ranges from 0 to 1/3. This new theory subsumes the Hertzian contact model for linear elastic materials, where D 1/3. Experiments are conducted to validate the theory using artificial soft fingers made of various materials such as rubber and silicone. Results for human fingers are also compared. This theory provides a basis for numerically constructing friction limit surfaces. The numerical friction limit surface can be approximated by an ellipse, with the major and minor axes as the maximum friction force and the maximum moment with respect to the normal axis of contact, respectively. Combining the results of the contactmechanics model with the contact-pressure distribution, the normalized friction limit surface can be derived for anthropomorphic soft fingers. The results of the contact-mechanics model and the pressure distribution for soft fingers facilitate the construction of numerical friction limit surfaces, and will enable us to analyze and simulate contact behaviors of grasping and manipulation in robotics. }
+}
+
+% AEBM extend linear to nonlinear 2
+@article{the-haptic-and-perceptional-characteristics-of-an-anthropomorphic-curved-soft-finger-structure,
+	url         = {https://doi.org/10.1515/cls-2019-0013},
+	title       = {The haptic and perceptional characteristics of an anthropomorphic curved soft finger structure},
+	author      = {S. Yuvaraj and R. Malayalamurthi and K. Venkatesh Raja},
+	pages       = {161--168},
+	volume      = {6},
+	number      = {1},
+	journal     = {Curved and Layered Structures},
+	doi         = {doi:10.1515/cls-2019-0013},
+	year        = {2019},
+	lastchecked = {2022-11-04}
+}
+
+% Not so advanced models 1
+@inproceedings{the-sliding-of-robot-fingers-under-combined-torsion-and-shear-loading,
+	author    = {Howe, R.D. and Kao, I. and Cutkosky, M.R.},
+	booktitle = {Proceedings. 1988 IEEE International Conference on Robotics and Automation},
+	title     = {The sliding of robot fingers under combined torsion and shear loading},
+	year      = {1988},
+	volume    = {},
+	number    = {},
+	pages     = {103-105 vol.1},
+	doi       = {10.1109/ROBOT.1988.12032}
+}
+
+% AEBM Kelvin-Voight
+@book{viscoelasticity,
+	author    = {Flugge, Wilhelm},
+	publisher = {Blaisdell Publishing Company, Waltham, MA},
+	title     = {Viscoelasticity},
+	year      = {1967}
+}
+
+% AEBM Maxwells model
+@book{on-the-dynamical-theory-of-gases,
+	author    = {James Clerk Maxwell},
+	publisher = {Royal Society},
+	title     = {On the dynamical theory of gases},
+	year      = {1867}
+}
+
+% AEBM Fung's model
+@incollection{mechanical-properties-and-active-remodeling-of-blood-vessels,
+	title     = {Mechanical properties and active remodeling of blood vessels},
+	author    = {Fung, Yuan-Cheng},
+	booktitle = {Biomechanics},
+	year      = {1993},
+	publisher = {Springer}
+}
+
+% AEBM Fung's model simplified 1
+@article{modeling-of-viscoelastic-contacts-and-evolution-of-limit-surface-for-robotic-contact-interface,
+	author  = {Tiezzi, Paolo and Kao, Imin},
+	year    = {2007},
+	month   = {05},
+	pages   = {206 - 217},
+	title   = {Modeling of Viscoelastic Contacts and Evolution of Limit Surface for Robotic Contact Interface},
+	volume  = {23},
+	journal = {Robotics, IEEE Transactions on},
+	doi     = {10.1109/TRO.2006.889494}
+}
+
+% AEBM Fung's model simplified 2
+@inproceedings{characteristics-of-contact-and-limit-surface-for-viscoelastic-fingers,
+	author    = {Tiezzi, P. and Kao, I.},
+	booktitle = {Proceedings 2006 IEEE International Conference on Robotics and Automation, 2006. ICRA 2006.},
+	title     = {Characteristics of contact and limit surface for viscoelastic fingers},
+	year      = {2006},
+	volume    = {},
+	number    = {},
+	pages     = {1365-1370},
+	doi       = {10.1109/ROBOT.2006.1641899}
+}
+
+% AEBM Fung's model simplified 3
+@article{effect-of-layer-compliance-on-frictional-behavior-of-soft-robotic-fingers,
+	author  = {Tiezzi, Paolo and Kao, Imin and Vassura, G.},
+	year    = {2007},
+	month   = {10},
+	pages   = {1653-1670},
+	title   = {Effect of layer compliance on frictional behavior of soft robotic fingers},
+	volume  = {21},
+	journal = {Advanced Robotics},
+	doi     = {10.1163/156855307782227390}
+}
+
+Kalkers MIM method for - a new algorithm...
+@inproceedings{on-the-contact-problem-in-elastostatics,
+	author    = {Kalker, J. J.},
+	editor    = {Del Piero, Gianpietro AND Maceri, Franco},
+	title     = {On the Contact Problem in Elastostatics},
+	booktitle = {Unilateral Problems in Structural Analysis},
+	year      = {1985},
+	publisher = {Springer Vienna},
+	address   = {Vienna},
+	pages     = {81-85},
+	abstract  = {Some aspects of the contact between elastic bodies are presented. Starting with the formulation of the contact problem we proceed to give algorithms for contact formation and frictional contact, with emphasis on rolling, which is the most general form of contact with friction. Numerical results are shown, and a comparison with experiments is made.},
+	isbn      = {978-3-7091-2632-}
+}
+
+% AEBM More advanved model 2 - A new algorithm for computing the indentation of a rigid body...
+@article{a-new-algorithm-for-computing-the-indentation-of-a-rigid-body-of-arbitrary-shape-on-a-viscoelastic-half-space,
+	title    = {A new algorithm for computing the indentation of a rigid body of arbitrary shape on a viscoelastic half-space},
+	journal  = {International Journal of Mechanical Sciences},
+	volume   = {50},
+	number   = {7},
+	pages    = {1194-1202},
+	year     = {2008},
+	issn     = {0020-7403},
+	doi      = {https://doi.org/10.1016/j.ijmecsci.2008.04.003},
+	url      = {https://www.sciencedirect.com/science/article/pii/S0020740308000623},
+	author   = {I.F. Kozhevnikov and J. Cesbron and D. Duhamel and H.P. Yin and F. Anfosso-Lédée},
+	keywords = {Contact mechanics, Viscoelastic contact, Viscoelasticity, Indenter, Numerical methods},
+	abstract = {In this paper the contact problem between a rigid indenter of arbitrary shape and a viscoelastic half-space is considered. Under the action of a normal force the penetration of the indenter and the distribution of contact pressure change. We wish to find the relations which link the pressure distribution, the resultant force on the indenter and the penetration on the assumption that the surfaces are frictionless. For indenters of arbitrary shape the problem may be solved numerically by using the Matrix Inversion Method (MIM), extended to viscoelastic case. In this method the boundary conditions are satisfied exactly at specified “matching points” (the mid-points of the boundary elements). It can be validated by comparing the numerical results to the analytic solutions in cases of a spherical asperity (loading and unloading) and a conical asperity (loading only). Finally, the method was implemented for a finite cylindrical shape with its curved face indenting the surface of the half-space. This last example shows the efficiency of the method in case of a prescribed penetration as well as a given normal load history.}
+}
+
+% AEBM more advanced model 3 - B solutions
+@article{a-general-approach-to-the-solution-of-boussinesqs-problem-for-polynomial-pressures-acting-over-polygonal-domains,
+	author   = {Marmo, Francesco and Rosati, Luciano},
+	title    = {A General Approach to the Solution of Boussinesq's Problem for Polynomial Pressures Acting over Polygonal Domains},
+	journal  = {Journal of Elasticity},
+	year     = {2016},
+	month    = {01},
+	day      = {01},
+	volume   = {122},
+	number   = {1},
+	abstract = {We outline a general approach for extending the classical Boussinesq's solution to the case of pressures distributed according to a polynomial law of arbitrary order over a polygonal domain. To this end we exploit a generalized version of the Gauss theorem and recent results of potential theory which consistently take into account the singularities affecting the expressions of the fields of interest, an issue which seems to have been overlooked in the existing literature. For linearly varying pressures we derive analytical expressions of displacements, strains and stresses at an arbitrary point of the half-space as a function of the loading function and of the position vectors which define the boundary of the loaded region. We briefly discuss how bilinear and more general pressure distributions can be accommodated in our formulation since the paper is mainly motivated by the interest in developing efficient computational tools for solving 3D problems in foundation engineering and contact mechanics. Finally, comparisons with existing solutions and numerical examples are discussed.},
+	pages    = {75-112},
+	issn     = {1573-2681},
+	doi      = {10.1007/s10659-015-9534-5},
+	url      = {https://doi.org/10.1007/s10659-015-9534-5}
+}
+
+% AEBM more advanced model 3 - C + B solutions
+﻿@article{a-boussinesq-cerruti-solution-set-for-constant-and-linear-distribution-of-normal-and-tangential-load-over-a-triangular-area,
+	author   = {Li, Junshan and Berger, Edward J.},
+	title    = {A Boussinesq--Cerruti Solution Set for Constant and Linear Distribution of Normal and Tangential Load over a Triangular Area},
+	journal  = {Journal of elasticity and the physical science of solids},
+	year     = {2001},
+	month    = {05},
+	day      = {01},
+	volume   = {63},
+	number   = {2},
+	pages    = {137-151},
+	abstract = {Starting from the elastic solution to a concentrated load on an elastic half space, this paper derives all the required Boussinesq--Cerruti equations for constant, linear and bilinear distributions of normal and tangential load over a triangle area, and presents a solution set to the equations. The surface displacement field in both the normal and tangential direction is obtained. The evaluations of Boussinesq--Cerruti equations are achieved by using various integration techniques. This paper also suggests a composition methodology to construct the solution due to more complicated loading profiles using the principle of superposition.},
+	issn     = {1573-2681},
+	doi      = {10.1023/A:1014013425423},
+	url      = {https://doi.org/10.1023/A:1014013425423}
+}
+
+% AEBM more advanced model 3 - Contact Modelling and Tactile Data Processing for Robot Skins - Love's and CB's formulations
+@article{contact-modelling-and-tactile-data-processing-for-robot-skins,
+	author         = {Wasko, Wojciech and Albini, Alessandro and Maiolino, Perla and Mastrogiovanni, Fulvio and Cannata, Giorgio},
+	title          = {Contact Modelling and Tactile Data Processing for Robot Skins},
+	journal        = {Sensors},
+	volume         = {19},
+	year           = {2019},
+	number         = {4},
+	article-number = {814},
+	url            = {https://www.mdpi.com/1424-8220/19/4/814},
+	issn           = {1424-8220},
+	abstract       = {Tactile sensing is a key enabling technology to develop complex behaviours for robots interacting with humans or the environment. This paper discusses computational aspects playing a significant role when extracting information about contact events. Considering a large-scale, capacitance-based robot skin technology we developed in the past few years, we analyse the classical Boussinesq&ndash;Cerruti&rsquo;s solution and the Love&rsquo;s approach for solving a distributed inverse contact problem, both from a qualitative and a computational perspective. Our contribution is the characterisation of the algorithms&rsquo; performance using a freely available dataset and data originating from surfaces provided with robot skin.},
+	doi            = {10.3390/s19040814}
+}
+
+% book about linear elasticity assumptions (Love's formulation argument)
+@book{the-linearized-theory-of-elasticity,
+	author    = { William S. Slaughter },
+	editor    = {},
+	publisher = {Springer},
+	title     = {The Linearized Theory of Elasticity},
+	year      = {2012}
+}
+
+% EFM models %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Winkler's method
+@article{kl-johnson-and-contact-mechanics,
+  author  = {Hills, D. and Nowell, D. and Barber, James},
+  year    = {2016},
+  month   = {02},
+  pages   = {},
+  title   = {KL Johnson and contact mechanics},
+  volume  = {231},
+  journal = {Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science},
+  doi     = {10.1177/0954406216634121}
+}
+
+% Winkler's method Stability of beam
+@article{stability-of-a-timoshenko-beam-resting-on-a-winkler-elastic-foundation,
+  title    = {Stability of a Timoshenko beam resting on a Winkler elastic foundation},
+  journal  = {Journal of Sound and Vibration},
+  volume   = {153},
+  number   = {2},
+  pages    = {193-202},
+  year     = {1992},
+  issn     = {0022-460X},
+  doi      = {https://doi.org/10.1016/S0022-460X(05)80001-X},
+  url      = {https://www.sciencedirect.com/science/article/pii/S0022460X0580001X},
+  author   = {S.Y. Lee and Y.H. Kuo and F.Y. Lin},
+  abstract = {The influences of a Winkler elastic foundation modulus, slenderness ratio and elastically restrained boundary conditions on the critical load of a Timoshenko beam subjected to an end follower force are investigated. The characteristic equation for elastic stability is derived. It is found that the critical flutter load for the cantilever Timoshenko beam will first decrease as the elastic foundation modulus is increased and when the elastic foundation modulus is greater than the corresponding critical value, which corresponds to the lowest critical load, it will increase, instead. In particular, if the elastic foundation modulus is large enough, the critical flutter load for the cantilever Timoshenko beam can be greater than that of the Bernoulli-Euler beam. For a clamped-translational or clamped-rotational elastic spring supported beam resting on an elastic foundation, there exists a critical value of the spring constant for each beam. At this critical point, the critical load jumps and the type of instability mechanism changes. The jump mechanisms for beams resting on elastic foundations of different modulus values are different.}
+}
+
+% Windkler's method on vibrations and buckling beams
+@article{vibrations-and-buckling-of-a-beam-on-a-variable-winkler-elastic-foundation,
+  title    = {Vibrations and buckling of a beam on a variable winkler elastic foundation},
+  journal  = {Journal of Sound and Vibration},
+  volume   = {115},
+  number   = {2},
+  pages    = {233-241},
+  year     = {1987},
+  issn     = {0022-460X},
+  doi      = {https://doi.org/10.1016/0022-460X(87)90469-X},
+  url      = {https://www.sciencedirect.com/science/article/pii/0022460X8790469X},
+  author   = {M. Eisenberger and J. Clastornik},
+  abstract = {Two methods for solving the eigenvalue problems of vibrations and stability of a beam on a variable Winkler elastic foundation are presented and compared. The first is based on using the exact stiffness, consistent mass, and geometric stiffness matrices for a beam on a variable Winkler elastic foundation. The second method is based on adding an element foundation stiffness matrix to the regular beam stiffness matrix, for vibrations and stability analysis. With these matrices, it is possible to find the natural frequencies and mode shapes of vibrations, and buckling load and mode shape, by using a small number of segments. It is concluded that the use of the element foundation stiffness approach yields better convergence at lower computation costs.}
+}
+
+% 
+@article{experimental-evaluation-of-an-elastic-foundation-model-to-predict-contact-pressures-in-knee-replacements,
+  title    = {Experimental evaluation of an elastic foundation model to predict contact pressures in knee replacements},
+  journal  = {Journal of Biomechanics},
+  volume   = {36},
+  number   = {11},
+  pages    = {1659-1668},
+  year     = {2003},
+  issn     = {0021-9290},
+  doi      = {https://doi.org/10.1016/S0021-9290(03)00176-3},
+  url      = {https://www.sciencedirect.com/science/article/pii/S0021929003001763},
+  author   = {Benjamin J. Fregly and Yanhong Bei and Mark E. Sylvester},
+  keywords = {Dynamic modeling, Contact pressure prediction, Total knee replacements},
+  abstract = {Computational wear prediction is an attractive concept for evaluating new total knee replacement designs prior to physical testing and implementation. An important hurdle to such technology is the lack of in vivo contact pressure predictions. To address this issue, this study evaluates a computationally efficient simulation approach that combines the advantages of rigid and deformable body modeling. The hybrid method uses rigid body dynamics to predict body positions and orientations and elastic foundation theory to predict contact pressures between general three-dimensional surfaces. To evaluate the method, we performed static pressure experiments with a commercial knee implant in neutral alignment using flexion angles of 0, 30, 60, and 90° and loads of 750, 1500, 2250, and 3000N. Using manufacturer CAD geometry for the same implant, an elastic foundation model with linear or nonlinear polyethylene material properties was implemented within a commercial multibody dynamics software program. The model's ability to predict experimental peak and average contact pressures simultaneously was evaluated by performing dynamic simulations to find the static configuration. Both the linear and nonlinear material models predicted the average contact pressure data well, while only the linear material model could simultaneously predict the trends in the peak contact pressure data. This novel modeling approach is sufficiently fast and accurate to be used in design sensitivity and optimization studies of knee implant mechanics and ultimately wear.}
+}
+
+% EFM slip of humanoid robot finger
+@article{the-sliding-of-robot-fingers-under-combined-torsion-and-shear-loading,
+  title   = {The sliding of robot fingers under combined torsion and shear loading},
+  author  = {Robert D. Howe and Imin Kao and Mark R. Cutkosky},
+  journal = {Proceedings. 1988 IEEE International Conference on Robotics and Automation},
+  year    = {1988},
+  pages   = {103-105 vol.1}
+}
+
+% EFM method compliance and sliding
+@article{quasistatic-manipulation-with-compliance-and-sliding,
+  author   = {Imin Kao and Mark R. Cutkosky},
+  title    = {Quasistatic Manipulation with Compliance and Sliding},
+  journal  = {The International Journal of Robotics Research},
+  volume   = {11},
+  number   = {1},
+  pages    = {20-40},
+  year     = {1992},
+  doi      = {10.1177/027836499201100102},
+  url      = {https://doi.org/10.1177/027836499201100102},
+  eprint   = {https://doi.org/10.1177/027836499201100102},
+  abstract = { We propose a method for modeling dextrous manipulation with sliding fingers. The approach combines compliance and friction limit surfaces. The method is useful for describing how a grasp will behave in the presence of external forces (e.g., when and how the fingertips will slide) and for planning how to control the fingers so that the grasped object will follow a desired trajectory. The sliding trajectories are characterized by a transient and steady-state solution. The underlying theory is first dis cussed and illustrated with several single-finger examples. Experimental results are also presented. The analysis is then extended to grasps with multiple sliding and nonslid ing fingers. The multifinger analysis is illustrated with an example of manipulating a card with two soft-contact fingers. }
+}
+
+% EFM - Stiffness and Contact Mechanics for Soft Fingers in Grasping and Manipulation
+@article{stiffness-and-contact-mechanics-for-soft-fingers-in-grasping-and-manipulation,
+  author  = {Kao, Imin and Yang, Fuqian},
+  year    = {2004},
+  month   = {03},
+  pages   = {132 - 135},
+  title   = {Stiffness and Contact Mechanics for Soft Fingers in Grasping and Manipulation},
+  volume  = {20},
+  journal = {Robotics and Automation, IEEE Transactions on},
+  doi     = {10.1109/TRA.2003.820868}
+}
+
+% FEM models %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% book of FEMs - they are old and popular
+@inproceedings{history-of-finite-element-method:-a-review,
+  author    = {Sabat, Lovely and Kundu, Chinmay Kumar},
+  editor    = {Das, Bibhuti Bhusan and Barbhuiya, Salim and Gupta, Rishi and Saha, Purnachandra},
+  title     = {History of Finite Element Method: A Review},
+  booktitle = {Recent Developments in Sustainable Infrastructure },
+  year      = {2021},
+  publisher = {Springer Singapore},
+  address   = {Singapore},
+  pages     = {395--404},
+  abstract  = {{Finite element method (FEM) is a numerical technique to obtain an approximate solution for problems involving elliptical partial differential equation by dividing the domain into n no of parts of smaller size and applying the boundary conditions to them. In more advance way, it is the analysis of any structure by dividing the whole body into number of small elements and applying the constraints and loads on them and finding the unknowns as per our analysis and the whole analysis are done by the software itself. Initially, the FEM concept was used for solving mathematical formulations in easier way but the development of the FEM concepts and various FEM software, like NASTRAN, ANSYS, etc., made its applications to reach into fields of statistical analysis of structures, linear and non-linear analysis, heat transfer problems and also in bio engineering, nuclear engineering, metallurgical and much more, and this is possible due to the advance types of element in the FEM software. So in the research, the origin and the history of FEM is been studied and the contribution of various researchers has been shown which gives a very clear development idea of FEM and applications of FEM in daily engineering applications from past date till today. The idea of discretization is very old, the mathematical papers on FEA by Schelbach and Courant show the same approach. Earlier, before 1922, also Courant used the finite element ideas in Dirchlet's principle. The FEM we use today involves the contribution of many researchers, namely Turner, Clough, Martin and Topp, Argyris, Bubuska, Aziz, Irons, Melosh and many more, like M. J. Turner at being perfected the direct stiffness method, clough coined the term `Finite Elements', contribution of B. M. Irons towards FEA was the introduction of shape functions, patch test, text books by Huges and Bathe, Zienkiewicz laid the foundation for further advancement of FEM, and thus the period of 1962--1972 is known as the golden age of FEM and so on.}},
+  isbn      = {978-981-15-4577-1}
+}
+
+% Examples of FEM application in manufacturing technology
+@article{examples-of-fem-application-in-manufacturing-technology,
+  title    = {Examples of FEM application in manufacturing technology},
+  journal  = {Journal of Materials Processing Technology},
+  volume   = {120},
+  number   = {1},
+  pages    = {450-457},
+  year     = {2002},
+  issn     = {0924-0136},
+  doi      = {https://doi.org/10.1016/S0924-0136(01)01210-9},
+  url      = {https://www.sciencedirect.com/science/article/pii/S0924013601012109},
+  author   = {Fritz Klocke and Thorsten Beck and Stefan Hoppe and Tilo Krieg and Norbert Müller and Tobias Nöthe and Hans-Willi Raedt and Kevin Sweeney},
+  keywords = {Finite element method, Production engineering, Manufacturing technology, Cutting, Grinding, Electro-discharge machining, Metal forming, Tribology},
+  abstract = {{The technological and economical pressure in production engineering requires an optimisation of existing production processes. The finite element method (FEM) is an appropriate tool to gain the necessary knowledge of these processes. This paper will present some examples of the application of FEM in different branches of manufacturing technology: cutting with a geometrically defined and an undefined cutting edge; electro-erosion technology; metal forming processes; tribology. After the presentation of the problem, the simulation set-up for each example will be discussed and the results will be presented. Thus, this paper will provide an overview of the current possibilities for the application of FEM in manufacturing technology.}}
+}
+
+% wheel rail profiles FEM
+@article{contact-mechanics-analysis-of-measured-wheel-rail-profiles-using-the-finite-element-method,
+  author   = {T Telliskivi and U Olofsson},
+  title    = {Contact mechanics analysis of measured wheel-rail profiles using the finite element method},
+  journal  = {Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit},
+  volume   = {215},
+  number   = {2},
+  pages    = {65-72},
+  year     = {2001},
+  doi      = {10.1243/0954409011531404},
+  url      = {https://doi.org/10.1243/0954409011531404},
+  eprint   = {https://doi.org/10.1243/0954409011531404},
+  abstract = {{AbstractA tool has been developed for contact mechanics analysis of the wheel-rail contact. Using measurements of wheel and rail profiles as input, the tool is based on the finite element (FE) code ANSYS. Traditionally, two methods have been used to investigate the rail-wheel contact, namely Hertz's analytical method and Kalker's software program Contact. Both are based on the half-space assumption as well as on a linear-elastic material model. The half-space assumption puts geometrical limitations on the contact. This means that the significant dimensions of the contact area must be small compared with the relative radii of the curvature of each body. Especially in the gauge corner of the rail profile, the half-space assumption is questionable since the contact radius here can be as small as 10 mm. By using the FE method (FEM) the user is not limited by these two assumptions. The profile measurement system Miniprof was used to measure the wheel and rail profiles that were used as input when generating the FE mesh.As a test case, a sharp curve (303 m radius) in a unidirectional commuter train track used by X1 and X10 trains was chosen. The results of two contact cases were compared with the results of the Hertz analytical method and the program Contact. In the first contact case the wheel was in contact with the rail gauge corner. In the second case the wheel was in contact with the rail head. In both contact cases Hertz and Contact presented very similar results for the maximum contact pressure. For the first contact case, a significant difference was found between the FE method and the Hertz method and the program Contact in all of output data. The Hertz and Contact methods both presented a maximum contact pressure that was three times larger (around 3 GPa) than the FE solution. Here, the difference was probably due to the combination of both the half-space assumption and the elastic-plastic material model. For the second contact case, there was no significant difference between the maximum contact pressure results of the three different contact mechanics methods employed. }}
+}
+
+% sliding wear application of FEM 
+@article{simulating-sliding-wear-with-finite-element-method,
+  title    = {Simulating sliding wear with finite element method},
+  journal  = {Tribology International},
+  volume   = {32},
+  number   = {2},
+  pages    = {71-81},
+  year     = {1999},
+  issn     = {0301-679X},
+  doi      = {https://doi.org/10.1016/S0301-679X(99)00012-2},
+  url      = {https://www.sciencedirect.com/science/article/pii/S0301679X99000122},
+  author   = {Priit Põdra and Sören Andersson},
+  keywords = {Wear simulation, FEA, Wear tests, Contact temperature},
+  abstract = {{Wear of components is often a critical factor influencing the product service life. Wear prediction is therefore an important part of engineering. The wear simulation approach with commercial finite element (FE) software ANSYS is presented in this paper. A modelling and simulation procedure is proposed and used with the linear wear law and the Euler integration scheme. Good care, however, must be taken to assure model validity and numerical solution convergence. A spherical pin-on-disc unlubricated steel contact was analysed both experimentally and with FEM, and the Lim and Ashby wear map was used to identify the wear mechanism. It was shown that the FEA wear simulation results of a given geometry and loading can be treated on the basis of wear coefficient-sliding distance change equivalence. The finite element software ANSYS is well suited for the solving of contact problems as well as the wear simulation. The actual scatter of the wear coefficient being within the limits of $\pm$40-60\% led to considerable deviation of wear simulation results. These results must therefore be evaluated on a relative scale to compare different design options.}}
+}
+
+% analysis-of-thermo-mechanical-solids-in-contact FEM
+@article{a-finite-element-procedure-for-the-analysis-of-thermo-mechanical-solids-in-contact,
+  title    = {A finite element procedure for the analysis of thermo-mechanical solids in contact},
+  journal  = {Computers \& Structures},
+  volume   = {75},
+  number   = {6},
+  pages    = {551-573},
+  year     = {2000},
+  issn     = {0045-7949},
+  doi      = {https://doi.org/10.1016/S0045-7949(99)00212-6},
+  url      = {https://www.sciencedirect.com/science/article/pii/S0045794999002126},
+  author   = {Daniel Pantuso and Klaus-Jürgen Bathe and Pavel A. Bouzinov},
+  keywords = {Thermo-mechanical analysis, Contact, Large strains},
+  abstract = {{We present a finite element procedure for the analysis of fully coupled thermo-elasto-plastic response of solids including contact conditions. The continuum mechanics formulation for the solid and contact conditions is summarized and effective finite element techniques for solution are given. The constraint function method is employed to impose the contact conditions at the Gauss points of the contact surface. Other procedures widely used in finite element analysis can be considered as particular cases of the constraint function method discussed herein.}}
+}
+
+% diagnosing failues in induction motors using FEM
+@article{induction-motors-fault-diagnosis-using-finite-element-method:-a-review,
+  author  = {Liang, Xiaodong and Ali, Mohammad Zawad and Zhang, Huaguang},
+  journal = {IEEE Transactions on Industry Applications},
+  title   = {Induction Motors Fault Diagnosis Using Finite Element Method: A Review},
+  year    = {2020},
+  volume  = {56},
+  number  = {2},
+  pages   = {1205-1217},
+  doi     = {10.1109/TIA.2019.2958908}
+}
+
+% cobot robot, tactile data
+@article{soft-robot-skin-with-conformal-adaptability-for-on-body-tactile-perception-of-collaborative-robots,
+  author  = {Ye, Zhiqiu and Pang, Gaoyang and Xu, Kaichen and Hou, Zeyang and Lv, Honghao and Shen, Yiren and Yang, Geng},
+  year    = {2022},
+  month   = {03},
+  pages   = {1-1},
+  title   = {Soft Robot Skin With Conformal Adaptability for On-Body Tactile Perception of Collaborative Robots},
+  journal = {IEEE Robotics and Automation Letters},
+  doi     = {10.1109/LRA.2022.3155225}
+}
+
+% using FEM to design tactile sensor
+@article{design-and-experimental-research-of-robot-finger-sliding-tactile-sensor-based-on-fbg,
+  author         = {Lu, Guan and Fu, Shiwen and Xu, Yiming},
+  title          = {Design and Experimental Research of Robot Finger Sliding Tactile Sensor Based on FBG},
+  journal        = {Sensors},
+  volume         = {22},
+  year           = {2022},
+  number         = {21},
+  article-number = {8390},
+  url            = {https://www.mdpi.com/1424-8220/22/21/8390},
+  issn           = {1424-8220},
+  abstract       = {{Aiming at the problem of flexible sliding tactile sensing for the actual grasp of intelligent robot fingers, a double-layer sliding tactile sensor based on fiber Bragg grating (FBG) for robot fingers is proposed in this paper. Firstly, the optimal embedding depth range of FBG in the elastic matrix of polydimethylsiloxane (PDMS) was determined through finite element analysis and static detection experiments of finger tactile sensing. Secondly, the sensor structure is optimized and designed through the simulation and dynamic experiments of sliding sensing to determine the final array structure. Thirdly, the sensing array is actually pasted on the surface of the robot finger and the sensing characteristics testing platform is built to test and analyze the basic performance of the sliding tactile sensor. Then, the sensor array is actually attached to the finger surface of the robot and the sensing characteristics testing platform is built to experiment and analyze the basic performance of the sliding tactile sensor. Finally, a sliding tactile sensing experiment of robot finger grasping is conducted. The experimental results show that the sliding tactile sensor designed in this paper has good repeatability and creep resistance, with sensitivities of 12.4 pm/N, 11.6 pm/N, and 14.5 pm/N, respectively, and the overall deviation is controlled within 5 pm. Meanwhile, it can effectively sense the signals of the robot fingers during static contact and sliding. The sensor has a high degree of fit with the robot finger structure, and has certain application value for the perception of sliding tactile signals in the object grasping of intelligent robot objects.}},
+  doi            = {10.3390/s22218390}
+}
+
+% red indent paper
+@inproceedings{grasp-analysis-using-deformable-fingers,
+  author    = {Ciocarlie, M. and Miller, A. and Allen, P.},
+  booktitle = {2005 IEEE/RSJ International Conference on Intelligent Robots and Systems},
+  title     = {Grasp analysis using deformable fingers},
+  year      = {2005},
+  volume    = {},
+  number    = {},
+  pages     = {4122-4128},
+  doi       = {10.1109/IROS.2005.1545525}
+}
+
+% BioTac - 3D finite element method (FEM) model of the SynTouch BioTac sensor : https://arxiv.org/abs/2103.16747
+@article{sim-to-real-for-robotic-tactile-sensing-via-physics-based-simulation-and-learned-latent-projections,
+  author     = {Yashraj S. Narang and Balakumar Sundaralingam and Miles Macklin and Arsalan Mousavian and Dieter Fox},
+  title      = {Sim-to-Real for Robotic Tactile Sensing via Physics-Based Simulation and Learned Latent Projections},
+  journal    = {CoRR},
+  volume     = {abs/2103.16747},
+  year       = {2021},
+  url        = {https://arxiv.org/abs/2103.16747},
+  eprinttype = {arXiv},
+  eprint     = {2103.16747},
+  timestamp  = {Wed, 07 Apr 2021 15:31:46 +0200},
+  biburl     = {https://dblp.org/rec/journals/corr/abs-2103-16747.bib},
+  bibsource  = {dblp computer science bibliography, https://dblp.org}
+}
+
+% BioTac - FEM  tactile model + DL : https://arxiv.org/abs/2006.03777
+@article{interpreting-and-predicting-tactile-signals-via-a-physics-based-and-data-driven-framework,
+  author     = {Yashraj S. Narang and Karl Van Wyk and Arsalan Mousavian and Dieter Fox},
+  title      = {Interpreting and Predicting Tactile Signals via a Physics-Based and Data-Driven Framework},
+  journal    = {CoRR},
+  volume     = {abs/2006.03777},
+  year       = {2020},
+  url        = {https://arxiv.org/abs/2006.03777},
+  eprinttype = {arXiv},
+  eprint     = {2006.03777},
+  timestamp  = {Fri, 12 Jun 2020 14:02:57 +0200},
+  biburl     = {https://dblp.org/rec/journals/corr/abs-2006-03777.bib},
+  bibsource  = {dblp computer science bibliography, https://dblp.org}
+}
+
+% FEM provides GT to Machine learning -> very good
+@article{ground-truth-force-distribution-for-learning-based-tactile-sensing:-a-finite-element-approach,
+  author  = {Sferrazza, Carmelo and Wahlsten, Adam and Trüeb, Camill and DrAndrea, Raffaello},
+  year    = {2019},
+  month   = {11},
+  pages   = {1-1},
+  title   = {Ground Truth Force Distribution for Learning-Based Tactile Sensing: A Finite Element Approach},
+  volume  = {PP},
+  journal = {IEEE Access},
+  doi     = {10.1109/ACCESS.2019.2956882}
+}
+
+% ML %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% general getting started with tactile data
+@article{tactile-sensors-for-robotic-applications,
+  author         = {Pirozzi, Salvatore},
+  title          = {Tactile Sensors for Robotic Applications},
+  journal        = {Sensors},
+  volume         = {20},
+  year           = {2020},
+  number         = {24},
+  article-number = {7009},
+  url            = {https://www.mdpi.com/1424-8220/20/24/7009},
+  pubmedid       = {33302388},
+  issn           = {1424-8220},
+  abstract       = {{In recent years, tactile sensing has become a key enabling technology to implement complex tasks by using robotic systems}},
+  doi            = {10.3390/s20247009}
+}
+
+% vision tacile hybrid system
+@article{more-than-a-feeling-learning-to-grasp-and-regrasp-using-vision-and-touch,
+  author     = {Roberto Calandra and Andrew Owens and Dinesh Jayaraman and Justin Lin and Wenzhen Yuan and Jitendra Malik and Edward H. Adelson and Sergey Levine},
+  title      = {More Than a Feeling: Learning to Grasp and Regrasp using Vision and Touch},
+  journal    = {CoRR},
+  volume     = {abs/1805.11085},
+  year       = {2018},
+  url        = {http://arxiv.org/abs/1805.11085},
+  eprinttype = {arXiv},
+  eprint     = {1805.11085},
+  timestamp  = {Mon, 13 Aug 2018 16:48:42 +0200},
+  biburl     = {https://dblp.org/rec/journals/corr/abs-1805-11085.bib},
+  }
+  bibsource  = {dblp computer science bibliography, https://dblp.org},
+
+% autoencoder for tactile sensor feature extraction
+% @article{convolutional-autoencoder-for-feature-extraction-in-tactile-sensing,
+%   author  = {Polic, Marsela and Krajacic, Ivona and Lepora, Nathan and Orsag, Matko},
+%   journal = {IEEE Robotics and Automation Letters},
+%   title   = {Convolutional Autoencoder for Feature Extraction in Tactile Sensing},
+%   year    = {2019},
+%   volume  = {4},
+%   number  = {4},
+%   pages   = {3671-3678},
+%   doi     = {10.1109/LRA.2019.2927950}
+% }
+
+% conditional Generative Adversarial Network model (cGAN)
+@inproceedings{touching-a-nerf-leveraging-neural-radiance-fields-for-tactile-sensory-data-generation,
+  title     = {Touching a Ne{RF}: Leveraging Neural Radiance Fields for Tactile Sensory Data Generation},
+  author    = {Shaohong Zhong and Alessandro Albini and Oiwi Parker Jones and Perla Maiolino and Ingmar Posner},
+  booktitle = {6th Annual Conference on Robot Learning},
+  year      = {2022},
+  url       = {https://openreview.net/forum?id=No3mbanRlZJ}
+}
+
+% diffusion model for simulating detail rich tactile images
+@misc{learning-to-read-braille:-bridging-the-tactile-reality-gap-with-diffusion-models,
+  title         = {Learning to Read Braille: Bridging the Tactile Reality Gap with Diffusion Models},
+  author        = {Carolina Higuera and Byron Boots and Mustafa Mukadam},
+  year          = {2023},
+  eprint        = {2304.01182},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.RO}
+}
+
+
+% classifying objects based on tactile interpretation from NN
+@article{single-grasp-object-classification-and-feature-extraction-with-simple-robot-hands-and-tactile-sensors,
+  author  = {Spiers, Adam and Liarokapis, Minas and Calli, Berk and Dollar, Aaron},
+  title   = {Single-Grasp Object Classification and Feature Extraction with Simple Robot Hands and Tactile Sensors},
+  journal = {IEEE Transactions on Haptics},
+  volume  = {9},
+  pages   = {60-71},
+  year    = {2016},
+  month   = {1},
+  doi     = {10.1109/TOH.2016.2521378}
+}
+
+% biotac sim paper
+@article{simulation-of-the-syntouch-biotac-sensor,
+  author    = {Ruppel, Philipp and Jonetzko, Yannick and G{\"o}rner, Michael and Hendrich, Norman and Zhang, Jianwei},
+  title     = {Simulation of the SynTouch BioTac Sensor},
+  editor    = {Strand, Marcus and Dillmann, R{\"u}diger and Menegatti, Emanuele and Ghidoni, Stefano},
+  booktitle = {Intelligent Autonomous Systems 15},
+  year      = {2019},
+  publisher = {Springer International Publishing},
+  address   = {Cham},
+  pages     = {374-387},
+  abstract  = {{We present a data-driven approach to simulate the BioTac tactile fingertip sensor within physics engines. The behavior of the sensor is first captured in an experimental setup that records positions and external forces of contacts as well as the sensor output. This data is then used to fit a non-linear model that maps force-annotated mesh collisions of a simulator to sensor responses.}},
+  isbn      = {978-3-030-01370-7},
+}
+
+% alex net
+@article{imagenet-classification-with-deep-convolutional-neural-networks,
+  author    = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E.},
+  title     = {ImageNet Classification with Deep Convolutional Neural Networks},
+  year      = {2012},
+  publisher = {Curran Associates Inc.},
+  address   = {Red Hook, NY, USA},
+  pages     = {1097-1105},
+  numpages  = {9},
+  location  = {Lake Tahoe, Nevada},
+  series    = {NIPS 12},
+  isbn      = {978-1-4673-2447-9}
+}

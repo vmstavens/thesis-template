@@ -9,7 +9,9 @@
 
 % Font, line height, paragraph indentation
 % \usepackage{mathptmx} % Times New Roman
-\usepackage{newtxtext, newtxmath} % Times New Roman (Modern + Math symbols)
+\usepackage{newtxtext} % Times New Roman (Modern + Math symbols)
+\usepackage[varvw]{newtxmath} % Times New Roman (Modern + Math symbols)
+
 \linespread{1.2}
 \setlength{\parindent}{0pt}
 % \usepackage{setspace}
@@ -55,6 +57,8 @@
 \def \FigureAbbreviaition {Fig.}
 \newcommand{\figref}[1]{\FigureAbbreviaition\ \ref{#1}}
 \newcommand{\tabref}[1]{Table \ref{#1}}
+\newcommand{\chapref}[1]{Chapter \ref{#1}}
+\newcommand{\algoref}[1]{Algorithm \ref{#1}}
 
 % Figure caption formatting
 \AtBeginDocument{%
@@ -64,12 +68,20 @@
 % \captionsetup[subtable]{aboveskip=10pt,belowskip=0pt}
 }
 
+
+
 % Array
 \usepackage{array}
 \usepackage{textpos}
 
 % Math and symbols
 % \usepackage{amsmath, amssymb, bm} % newtxmath has same defines as amssymb
+
+\usepackage{amsmath}
+\newtheorem{problem}{Problem}
+
+% \theoremstyle{remark}
+
 \usepackage{amsmath, bm}
 \usepackage{mathtools}
 \usepackage{verbatim}
@@ -84,19 +96,44 @@
 \usepackage{xspace}
 
 \newcommand{\fakecite}[0]{\hl{\textbackslash cite}\xspace}
-% \renewcommand{\vec}[1]{\ensuremath{\bm{#1}}} % vector [amsmath, bm]
-\renewcommand{\vec}[1]{\ensuremath{\bm{\mathrm{#1}}}} % matrix [amsmath, bm]
+\renewcommand{\vec}[1]{\ensuremath{\bm{#1}}} % vector [amsmath, bm]
+
 \newcommand{\mat}[1]{\ensuremath{\bm{\mathrm{#1}}}} % matrix [amsmath, bm]
-\newcommand{\T}[0]{\ensuremath{^\mathsf{T}}} % transpose ^T
+\newcommand{\T}[0]{\top} % transpose ^T
 \newcommand{\inv}[0]{\ensuremath{^{-1}}} % inverse ^{-1}
 \newcommand{\pinv}[0]{\ensuremath{^{\dagger}}} % pseudo-inverse ^{-1}
+
 \newcommand{\rvec}[1]{\ensuremath{\renewcommand{\arraystretch}{0.6}\begin{bmatrix} #1 \end{bmatrix}}}
+\newcommand{\rlist}[1]{\ensuremath{\renewcommand{\arraystretch}{0.6}\begin{Bmatrix} #1 \end{Bmatrix}}}
 \newcommand{\cvec}[1]{\ensuremath{\renewcommand{\arraystretch}{1.0}\begin{bmatrix} #1 \end{bmatrix}}}
+
 \newcommand{\twodots}{\mathinner {\ldotp \ldotp}} % .. (two dots)
 \renewcommand{\secref}[1]{\hyperref[#1]{\ref*{#1}\ \nameref*{#1}}}
 % \newcommand{\tf}[3][T]{\ensuremath{\tensor[^{#2}]{\mat{#1}}{_{#3}}}}
 \newcommand{\tf}[3][T]{\ensuremath{{\mat{#1}^{#2}_{#3}}}}
+
+\newcommand{\rot}[3][R]{\ensuremath{{\mat{#1}^{#2}_{#3}}}}
+
+\newcommand{\highlight}[1]{\hl{#1}\xspace}
 \newcommand*\of{\qty} % $f\of(x)$
+\newcommand{\R}[0]{\mathbb{R}} % real number R
+
+\newcommand{\mvar}[1]{$#1$} % environment for mathematical variable $f(x)$ => \mvar{f(x)}
+\newcommand{\robframe}[1]{\mvar{\{\text{#1}\}}}
+\newcommand{\inR}[1]{ \in\R^{#1} }
+\newcommand{\SE}{ \text{ SE} }
+
+\newcommand{\Csf}{\mathcal{E}_{f,\text{SF}} }
+\newcommand{\Chf}{\mathcal{C}_{f,\text{HF}} }
+
+\newcommand{\vsep}{\;} % vector separator
+\newcommand{\mfor}{\text{ for }} % for in equation
+\newcommand{\mand}{\text{ and }} % and in equation
+\newcommand{\mspa}{\qquad} % for in equation
+
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
 
 % usage: \tf{from}{to} | \tf[T]{from}{to} | \tf[R]{from}{to} | \tf[t]{from}{to} etc.
 % \newcommand{\tf}[3][T]{%
@@ -139,16 +176,26 @@
 \usepackage{spreadtab}
 \usepackage{booktabs}
 \usepackage{tabto}
-
+\usepackage{makecell}
 \usepackage{diagbox}
 \usepackage{tabularx}
 \usepackage[export]{adjustbox}
+
+
+% set max matrix size
+\setcounter{MaxMatrixCols}{20}
+
+% \aug for vertical line in matrix
+\newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+
 
 % Custom tables commands for fixed-column sizes
 \newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
 \newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
 \newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
 \newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+\setlength\doublerulesep{0.3cm} % when using a double line, make extra space
 
 % Enumeration formatting
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
@@ -161,7 +208,7 @@
 \renewcommand{\labelitemiv}{\sqrbulletsml}
 
 % Colors (latexcolor.com)
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \definecolor{cerulean}{rgb}{0.0, 0.48, 0.65}
 \definecolor{earthyellow}{rgb}{0.88, 0.66, 0.37}
 \definecolor{darkmagenta}{rgb}{0.55, 0.0, 0.55}
@@ -173,6 +220,10 @@
 \definecolor{light-yellow}{RGB}{255, 255, 137}
 \definecolor{light-blue}{RGB}{148, 201, 233}
 
+\definecolor{tableheader}{gray}{0.9}
+
+\definecolor{metaorange}{rgb}{0.98, 0.54, 0.13} % also known as flame orange
+
 % colored square box
 % https://tex.stackexchange.com/questions/201300/inline-boxes-alternative-to-pifonts-non-filled-but-shadowed-box
 \newcommand{\sqbox}[1]{\textcolor{#1}{\rule{1.2ex}{1.2ex}}}
@@ -181,10 +232,11 @@
 \usepackage{listings}
 % \renewcommand{\arraystretch}{1.2}
 \renewcommand{\tabcolsep}{0.2cm}
+\usepackage{algorithm,algorithmicx,algpseudocode}
 
 % Code snippets formatting
 \lstset{
-    backgroundcolor=\color{black!5},        % set backgroundcolor
+    backgroundcolor=\color{black!5},        % set background color
     basicstyle=\footnotesize\ttfamily,      % basic font setting
     captionpos=b,                           % caption position
     frame=single,                           % draw a frame at the top and bottom of the code block
@@ -208,6 +260,11 @@
   \endgroup
 }
 
+% package labels
+\usepackage{tikz}
+\newcommand{\meta}[1]{ \tikz[baseline=(X.base)]\node [draw=metaorange,fill=metaorange,semithick,rectangle,inner sep=2.5pt, rounded corners=2pt] (X) {  \textbf{\textcolor{white}{\textsf{#1}}}}; \hphantom}
+\newcommand{\pkg}[1] { \tikz[baseline=(X.base)]\node [draw=blue,fill=blue,semithick,rectangle,inner sep=1.3pt, rounded corners=2pt] (X)             {  \textbf{\textcolor{white}{\textsf{#1}}}}; \hphantom}
+
 % Appendices
 \usepackage[toc]{appendix}
 
@@ -217,21 +274,46 @@
 \DeclareNameAlias{sortname}{family-given}
 \DeclareNameAlias{default}{family-given}
 
-\addbibresource{resources.bib}
+% resources
+\addbibresource{resources/resources-appendix.bib}
+\addbibresource{resources/resources-tactile-perception.bib}
+\addbibresource{resources/resources-system-setup.bib}
+\addbibresource{resources/resources-words.bib}
+\addbibresource{resources/resources-introduction.bib}
+\addbibresource{resources/resources-modeling.bib}
+\addbibresource{resources/resources-sota-tactile-perception.bib}
+\addbibresource{resources/resources-sota-pose-estimation.bib}
+\addbibresource{resources/resources-sota-in-hand-manipulation.bib}
+\addbibresource{resources/resources-in-hand-manipulation.bib}
+\addbibresource{resources/resources-pose-estimation.bib}
 
 % Section cross-referencing
 \usepackage{nameref}
 \usepackage{hyperref}
 
+\usepackage{bookmark}
+
 % Label counter formatting (e.g. Figure 1 or Figure 2.1)
-% used for continuous numbering (1, 2, 3 ..) through all chapters
+% In case you want the numbering to start with the chapter number e.g. 1.1 1.2 1.3 for chapter 1 figures, use this instead of the one below
 \usepackage{chngcntr} 
 \AtBeginDocument{%
-    \counterwithout{figure}{section}
-    \counterwithout{table}{section}
-    \counterwithout{equation}{section}
-    \counterwithout{lstlisting}{section}
+    \counterwithin{figure}{chapter}
+    \counterwithin{table}{chapter}
+    \counterwithin{equation}{chapter}
+    \counterwithin{lstlisting}{chapter}
 }
+
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+
+% In case you want the numbering to continue between chapters e.g. 1 2 3 4 5, use this instead of the one above
+% \usepackage{chngcntr} 
+% \AtBeginDocument{%
+%     \counterwithout{figure}{chapter}
+%     \counterwithout{table}{chapter}
+%     \counterwithout{equation}{chapter}
+%     \counterwithout{lstlisting}{chapter}
+% }
 
 % Glossaries and acronyms
 % must be loaded last + no empty includes in main document.

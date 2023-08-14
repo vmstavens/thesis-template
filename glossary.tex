@@ -1,19 +1,191 @@
 % Terms
 
-\newglossaryentry{glossary-label}
-{
+\newglossaryentry{glossary-label} {
     name={glossary term},
     description={glossary term description}
 }
+
+\newglossaryentry{docker} {
+    name={docker container},
+    description={, a docker container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another~\cite{docker}}
+}
+
+\newglossaryentry{manipulator} {
+    name={manipulator}, description={: A serial robot mechanisms. The robot manipulator is represented by a serial chain of rigid bodies, called robot segments, connected by joints~\cite{robotics-manipulator}}
+}
+
+% \newglossaryentry{dof}{ name={DOF}, description={degrees of freedom} }
 
 % Acronyms
 
 \newacronym{acronym-label}{acronym-abbr}{actorym-description}
 
+\newacronym{dof}{DOF}{degrees of freedom}
+
+\newacronym{sota}{SOTA}{state of the art}
+
+\newacronym{aebm}{AEBM}{analytical elasticity-based models}
+
+\newacronym{efm}{EFM}{elastic foundation models}
+
+\newacronym{fem}{FEM}{finite element models}
+
+\newacronym{pnp}{PNP}{pick-and-place}
+
+\newacronym{hf}{HF}{hard finger}
+
+\newacronym{sf}{SF}{soft finger}
+
+\newacronym{pwof}{PwoF}{point-contact-without-friction}
+
+\newacronym{iep}{IEP}{Inverse Elasticity Problem}
+
+\newacronym{mim}{MIM}{Matrix Inversion Method}
+
+\newacronym{ml}{ML}{machine learning}
+
+\newacronym{gk}{GK}{grasp kinematics}
+
+\newacronym{cgan}{cGAN}{conditional Generative Adversarial Network}
+
+\newacronym{mlp}{MLP}{Multi Layered Perceptron}
+
+\newacronym{pc}{PC}{point cloud}
+
+\newacronym{ransac}{RANSAC}{Random Sample Consensus}
+
+\newacronym{icp}{ICP}{Iterative Closest Point}
+
+\newacronym{gmm}{GMM}{Gaussian Mixture Model}
+
+\newacronym{qap}{QAP}{Quadratic Assignment Problem}
+
+\newacronym{sdp}{SDP}{Semi-Definite Programming}
+
+\newacronym{cpd}{CPD}{Coherent Point Drift}
+
+\newacronym{ch-gmm}{CH-GMM}{Convex Hull Indexed Gaussian Mixture Model}
+
+\newacronym{jrmpc}{JRMPC}{Joint Registration of Multiple Point Sets}
+
+\newacronym{deepgmr}{DeepGMR}{Deep Gaussian Mixture Registration}
+
+\newacronym{csgm}{CSGM}{Cross-Source Graph Matching}
+
+\newacronym{fgm}{FGM}{Factorized Graph Matching}
+
+\newacronym{rcqp}{RCQP}{Relaxed Convex Quadratic Programming}
+
+\newacronym{socp}{SOCP}{Second Order Cone Programming}
+
+\newacronym{qp}{QP}{Quadratic Programming}
+
+\newacronym{qcqp}{QCQP}{Quadraticaly Constrained Quadratic Programming}
+
+\newacronym{gnc}{GNC}{Graduated Non-Convexity}
+
+\newacronym{iron}{IRON}{Invariant-based global Robust estimation and OptimizatioN}
+
+\newacronym{tp}{TP}{Tactile Perception}
+
+\newacronym{ihm}{IHM}{In-Hand Manipulation}
+
+\newacronym{ihpe}{IHPE}{In-Hand Pose Estimation}
+
+\newacronym{cad}{CAD}{Computer Aided Design}
+
+\newacronym{rom}{ROM}{Range of Motion}
+
+\newacronym{rrt}{RRT}{Rapidly-exploring Random Tree}
+
+\newacronym{ur}{UR}{Universal Robots}
+
+\newacronym{ompl}{OMPL}{The Open Motion Planning Library}
+
+\newacronym{prm}{PRM}{Probabilistic Roadmap Method}
+
+\newacronym{fmt}{FMT}{Fast Marching Tree}
+
+\newacronym{pid}{PID}{Proportional-Integral-Derivative}
+
+\newacronym{relu}{ReLU}{Rectified Linear Unit}
+
+\newacronym{gt}{GT}{Ground Truth}
+
+\newacronym{fpfh}{FPFH}{Fast Point Feature Histograms}
+
+\newacronym{rls}{RLS}{Recursive Least Squares}
+
+\newacronym{tcp}{TCP}{Tool Center Point}
+
+\newacronym{pd}{PD}{Proportional-Derivative}
+
+\newacronym{sdh}{SDH}{Shadow Dexterous Hand}
+
+\newacronym{se}{SE}{Special Euclidean}
+
+\newacronym{gm}{GM}{Geman McClure}
+
+\newacronym{tls}{TLS}{Truncated Least Squares}
+
+\newacronym{br}{BR}{Black-Rangarajan}
+
+\newacronym{psd}{PSD}{Positive Semidefinite}
+
+\newacronym{il}{IL}{Immitation Learning}
+
+\newacronym{rl}{RL}{Reinforcement Learning}
+
+\newacronym{eaa}{EAA}{Equivalent Angle Axis}
+
+\newacronym{dapg}{DAPG}{Demo Augmented Policy Gradient}
+
+\newacronym{gail}{GAIL}{Generative Adversarial Imitation Learning}
+
+\newacronym{ah}{AH}{Adroit Hand}
+
+\newacronym{rpy}{RPY}{Roll-Pitch-Yaw}
+
+\newacronym{npg}{NPG}{Natural Policy Gradient}
+
+\newacronym{fim}{FIM}{Fisher Information Matrix}
+
+\newacronym{PnP}{PnP}{Perspective-n-Point}
+
+\newacronym{tsv}{TSV}{Task Space Vector}
+
+\newacronym{slsqp}{SLSQP}{Sequential Least-Squares Quadratic Programming}
+
+\newacronym{mpc}{MPC}{Model Predictive Control}
+
+\newacronym{soil}{SOIL}{State-Only Imitation Learning}
+
+\newacronym{anova}{ANOVA}{Analysis of Variance}
+
+\newacronym{mdp}{MDP}{Markoc Decision Process}
+
+\newacronym{bc}{BC}{Behavior Cloning}
+
+\newacronym{pde}{PDE}{Partial Differential Equations}
+
+
 % Dual entries
 
 \newdualentry{glossary-multi-label}{glossary-multi-abbr}{glossary-multi-long}{glossary-multi-description}
 
+\newdualentry{cv}{CV}{computer vision}{ is a field of artificial intelligence (AI) that enables computers and systems to derive meaningful information from digital images, videos and other visual inputs - and take actions or make recommendations based on that information~\cite{what-is-computer-vision}}
 
+\newdualentry{pe}{PE}{pose estimation}{ A particular instance of feature-based alignment, which occurs very often, is estimating an object's 3D pose from a set of 2D point projections. This pose estimation problem is also known as extrinsic calibration~\cite{what-is-pose-estimation}}
 
+\newdualentry{corr-problem}{CP}{correspondence problem}{is the problem where one aims at finding correspondences between the pixels in two (or more) images~\cite{correspondence-problems-in-computer-vision}}
+
+\newdualentry{dl}{DL}{deep learning}{ are methods that allow computational models that are composed of multiple processing layers to learn representations of data with multiple levels of abstraction~\cite{deep-learning}}
+
+\newdualentry{ros}{ROS}{Robot Operating System}{is a set of open-source software libraries and tools that help build robot applications.~\cite{ros}}
+
+\newdualentry{cobot}{cobots}{collaborative robots}{ are robots which facilitate human-robot collaboration~\cite{cobot-programming-for-collaborative-industrial-tasks-an-overview}}
+
+\newdualentry{ee}{EE}{end effector}{ is a generic term for all functional units involved in direct interaction of the robot system with the environment or with a given object~\cite{robot-grippers}} 
+
+\newdualentry{pcr}{PCR}{point cloud registration}{ is a generic term for all functional units involved in direct interaction of the robot system with the environment or with a given object~\cite{robot-grippers}} 
 

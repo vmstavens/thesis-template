@@ -107,6 +107,7 @@ To generate $\LaTeX$ compiled plots, ``matplotlib`` supports directly exporting 
 <!-- flex parent -->
 <!-- <div style="width=100%; margin-left: auto; margin-right: auto; "> -->
 
+<p>
 <div style="font-size:75%; margin:0px; padding:0px; width: 48%; float:left;">
 
 ```python
@@ -130,6 +131,7 @@ plt.show()
 </div>
 <img src="docs/plot.png" style="background-color:white; margin:0px; padding:0px; width: 48%; float:right;"/>
 
+</p>
 <!-- </div> -->
 
 If the generated ``example.pdf`` is too large, it can be compressed using 

@@ -127,7 +127,7 @@ plt.legend()
 plt.show()
 ```
 </td>
-<td><img src="docs/plot.png" alt="Image" width="90%" style="background-color:white; margin:0px; padding:0px"/></td>
+<td><img src="docs/plot.png" width="90%" style="background-color:white; margin:0px; padding:0px"/></td>
 
 </table>
 

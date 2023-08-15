@@ -105,9 +105,9 @@ In these cases, the extra white space is caused by the text box of the inserted 
 To generate $\LaTeX$ compiled plots, ``matplotlib`` supports directly exporting to pdf. One example can be seen below
 
 <!-- flex parent -->
-<div style="display: flex; flex-direction:column; width=100%; margin-left: auto; margin-right: auto; ">
+<div style="display: flex; flex-direction:row; width=100%; margin-left: auto; margin-right: auto; ">
 
-<div style="font-size:75%; margin:0px; padding:0px;">
+<div style="font-size:75%; margin:0px; padding:0px; width: 48%;">
 
 ```python
 import matplotlib.pyplot as plt
@@ -128,7 +128,7 @@ plt.legend()
 plt.show()
 ```
 </div>
-<div><img src="docs/plot.png" width="90%" style="background-color:white; margin:0px; padding:0px"/></div>
+<img src="docs/plot.png" style="background-color:white; margin:0px; padding:0px; width: 48%"/>
 
 </div>
 

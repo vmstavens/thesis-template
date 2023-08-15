@@ -100,13 +100,42 @@ Below is an example generated in draw.io
   <img title="pdf compiled image" src="docs/drawio.png" width="54%" />
 </p>
 
-In these cases, the extra white space is caused by the text box of the inserted text. This can be cropped using Inkscape. If the generated ``example.pdf`` is too large, it can be compressed using 
+In these cases, the extra white space is caused by the text box of the inserted text. This can be cropped using Inkscape. 
+
+To generate $\LaTeX$ compiled plots, ``matplotlib`` supports directly exporting to pdf. One example can be seen below
+
+<table style="width=100%; margin-left: auto; margin-right: auto; ">
+<tr>
+<td style="font-size:75%; margin:0px; padding:0px;">
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.rcParams['text.usetex'] = True
+x = np.linspace(0, 4 * np.pi, 100)
+
+plt.grid()
+
+y = np.sin(x)
+plt.title(r"\Large $$ \textrm{A Title} $$")
+plt.xlabel(r"\large $$ t \textrm{ [s]} $$")
+plt.ylabel(r"\large $$ v \textrm{ [m\slash s]} $$")
+plt.plot(x, y,label=r"$$ \textrm{Signal Velocity} $$")
+plt.legend()
+
+plt.show()
+```
+</td>
+<td><img src="docs/plot.png" alt="Image" width="90%" style="background-color:white; margin:0px; padding:0px"/></td>
+
+</table>
+
+If the generated ``example.pdf`` is too large, it can be compressed using 
 ```bash
 pdfcompress example.pdf
 ```
 This will generate ``example-comp.pdf`` using ghost script.
-
-<p>
 
 The figure can then be inserted into your $\LaTeX$ document using
 ```latex
@@ -120,4 +149,3 @@ The figure can then be inserted into your $\LaTeX$ document using
 	\end{small}
 \end{figure}
 ```
-</p>

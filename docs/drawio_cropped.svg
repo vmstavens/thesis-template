@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="121.00605"
+   height="92.093651"
+   viewBox="0 0 121.00605 92.093649"
+   sodipodi:docname="drawio.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath18">
+      <path
+         d="M 0,0 H 151.96856 V 75.375 H 0 Z"
+         id="path16" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath68">
+      <path
+         d="M 0,0 H 151.96856 V 75.375 H 0 Z"
+         id="path66" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="drawio"
+     transform="matrix(1.3333333,0,0,-1.3333333,-41.262062,92.093652)">
+    <g
+       id="g10"
+       transform="scale(1.00005)">
+      <g
+         id="g12">
+        <g
+           id="g14" />
+        <g
+           id="g30">
+          <g
+             clip-path="url(#clipPath18)"
+             id="g28">
+            <g
+               transform="matrix(1,0,0,-1,0,75.375)"
+               id="g26">
+              <g
+                 id="g24">
+                <g
+                   id="g22">
+                  <path
+                     d="m 31.32,30 h 90 v 45 h -90 z"
+                     style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     id="path20" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       transform="matrix(1,0,0,-1,67.449,32.437)"
+       style="font-variant:normal;font-weight:normal;font-size:7.2727px;font-family:txsys;-inkscape-font-specification:txsys;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="text34"><tspan
+         x="0"
+         y="0"
+         id="tspan32">∞</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(1,0,0,-1,63.961,30.445)"
+       style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:txexs;-inkscape-font-specification:txexs;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="text38"><tspan
+         x="0"
+         y="0"
+         id="tspan36">Õ</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(1,0,0,-1,65.102,8.906)"
+       style="font-variant:normal;font-weight:normal;font-size:7.2727px;font-family:NewTXMI7;-inkscape-font-specification:NewTXMI7;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="text42"><tspan
+         x="0"
+         y="0"
+         id="tspan40">푖</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(1,0,0,-1,67.724,8.906)"
+       style="font-variant:normal;font-weight:normal;font-size:7.2727px;font-family:txmiaX;-inkscape-font-specification:txmiaX;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="text46"><tspan
+         x="0"
+         y="0"
+         id="tspan44">=</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(1,0,0,-1,72.029,8.906)"
+       style="font-variant:normal;font-weight:normal;font-size:6.9738px;font-family:CMR7;-inkscape-font-specification:CMR7;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="text50"><tspan
+         x="0"
+         y="0"
+         id="tspan48">1</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(1,0,0,-1,79.28,20.251)"
+       style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:NewTXMI;-inkscape-font-specification:NewTXMI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="text54"><tspan
+         x="0"
+         y="0"
+         id="tspan52">휇</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(1,0,0,-1,84.809,18.756)"
+       style="font-variant:normal;font-weight:normal;font-size:7.2727px;font-family:NewTXMI7;-inkscape-font-specification:NewTXMI7;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="text58"><tspan
+         x="0"
+         y="0"
+         id="tspan56">푖</tspan></text>
+    <g
+       id="g60"
+       transform="scale(1.00005)">
+      <g
+         id="g62">
+        <g
+           id="g64" />
+        <g
+           id="g76">
+          <g
+             clip-path="url(#clipPath68)"
+             id="g74">
+            <g
+               transform="matrix(1,0,0,-1,0,75.375)"
+               id="g72">
+              <g
+                 id="g70" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       transform="matrix(1,0,0,-1,34.458,61.501)"
+       style="font-variant:normal;font-weight:normal;font-size:9.9626px;font-family:SFRM1000;-inkscape-font-specification:SFRM1000;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="text80"><tspan
+         x="0 7.192997 12.726225 15.492839 22.738638 25.505253 32.761013 38.985645 43.96595 50.32209 54.74847 65.545937 69.419395 73.845779 79.103043"
+         y="0"
+         sodipodi:role="line"
+         id="tspan78">ThisisLaTeXtext</tspan></text>
+  </g>
+</svg>

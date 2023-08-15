@@ -1,0 +1,206 @@
+#!/bin/python3
+
+import os
+from lxml import etree
+import subprocess
+import shutil
+import sys
+from typing import List
+
+temp_dir = "svg2latex-temp/"
+
+def red(input: str) -> str:
+	"""returns the string but bold and red
+
+	Args:
+		input (str): input string to be converted
+
+	Returns:
+		str: converted input string
+	"""
+	return f"\033[91m\033[1m{input}\033[91m\033[0m"
+
+def green(input: str) -> str:
+	"""returns the string but bold and green
+
+	Args:
+		input (str): input string to be converted
+
+	Returns:
+		str: converted input string
+	"""
+	return f"\033[1m\033[92m{input}\033[91m\033[0m"
+
+def parse(in_path: str):
+	# boiler plate svg text
+	SVG_NAMESPACE = "{http://www.w3.org/2000/svg}"
+
+	# output path
+	out_path = temp_dir + in_path.split(".")[0] + "-parsed.svg"
+
+	with open(in_path) as f:
+		text = f.read()
+
+	# remove breaks (needs for inkscape to compile it properly)
+	text = text.replace("<br />", "")
+
+	with open(in_path, "w") as f:
+		f.write(text)
+
+	tree = etree.parse(in_path)
+	root = tree.getroot()
+
+	texts = tree.xpath("//text()")
+	for txt_elements in root.findall(f".//{SVG_NAMESPACE}text"):
+
+		# remove the ugly looking error message
+		if txt_elements.text == "Text is not SVG - cannot display":
+			txt_elements.text = ""
+
+		# in case no math is involved, just continue
+		if txt_elements.text == None:
+			continue
+		if txt_elements.text.find("$") == -1:
+			continue
+
+		# separate the string into elements separated by $$ e.g. "$$\sum x$$" -> ["$$","\sumx","$$"]
+		text_array = [u for x in txt_elements.text.split(r"$$") for u in (x, r"$$")][1:-1][0:-1]
+  
+		# insert display style for nice looking formulas
+		text_array.insert(1, "\displaystyle")
+  
+		# ensure always one $ is present
+		text_array = [s[:-1] if s == "$$" else s for s in text_array]
+  
+		# create the finished math text
+		text_nice = ''.join(text_array)
+  
+		# remove the extra $
+		txt_elements.text = text_nice.replace("$$", "$")
+
+	with open(out_path, "wb") as f:
+		f.write(etree.tostring(root, pretty_print=True))
+
+	print(green("successfully parsed svg file..."))
+	return out_path
+
+def convert(file_path: str) -> None:
+	
+	LATEX_TEMPLATE = """
+	\\documentclass{{standalone}}
+	\\usepackage[T1]{{fontenc}}
+	\\usepackage{{amsmath, bm}}
+	\\usepackage{{graphicx}}
+	\\usepackage{{xcolor}}
+	\\usepackage{{commath}}
+ 	\\usepackage[varvw]{{newtxmath}}
+	\\usepackage{{bm}}
+	\\begin{{document}}
+	\\input{{{filename}.pdf_tex}}
+	\\end{{document}}
+	"""
+
+	# temp dir for file generation
+	temp_dir = "svg2latex-temp/"
+
+	# create svg2latex-temp/
+	if (not os.path.exists(temp_dir)):
+		os.mkdir(temp_dir)
+
+	# create svg2latex-temp/file_path e.g. svg2latex-temp/test.svg
+	parsed_file_path = parse(file_path)
+	parsed_file_name = parsed_file_path.split("/")[-1].split(".")[0]
+
+	# get the file name
+	file_name = file_path.split('.')[0]
+	
+	# create the Inkscape .pdf_tex
+	retcode = subprocess.call(
+		[
+			"inkscape",
+			"-D",
+			parsed_file_path,
+			f"--export-pdf={temp_dir}{file_name}.pdf",
+			"--export-latex",
+		]
+	)
+	assert retcode == 0, "Incorrect Inkscape parsing"
+ 
+	# create tmp tex file to generate desired pdf
+	tmp_tex = f"{parsed_file_name}.tex"
+
+	# create the latex document string
+	latex_file_content = LATEX_TEMPLATE.format(filename=file_name)
+
+	# write the latex document string to file
+	with open(os.path.join(temp_dir, tmp_tex), "w") as f:
+		f.write(latex_file_content)
+
+	# get root dir (where the script is called from)
+	root_dir = os.getcwd()
+	
+	# jump to temp dir
+	os.chdir(temp_dir)
+ 
+	# compile tmp_tex to generate pdf
+	retcode = subprocess.call(
+		[
+			"pdflatex",
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"-recorder",
+			tmp_tex,
+		]
+	)
+ 
+	# jump back to root dir
+	os.chdir(root_dir)
+	assert retcode == 0, "Incorrect PDF latex generation"
+ 
+	print(green("successfully converted svg to pdf..."))
+	result_file_name = tmp_tex.split(".")[0] + ".pdf"
+	result_file_path = os.path.join(temp_dir, tmp_tex.split(".")[0] + ".pdf")
+
+	# if the file already exists
+	if os.path.isfile(root_dir + "/" + result_file_name):
+		os.remove(root_dir + "/" + result_file_name)
+
+	# move the result into the root dir
+	shutil.move(result_file_path, root_dir)
+ 
+	# rename the result such that it does not contain the "-parsed" segment
+	os.rename(root_dir + "/" + result_file_name, root_dir + "/" + result_file_name.replace("-parsed",""))
+
+def svg2latex(file_path: str) -> None:
+	# is the input a svg file
+	if file_path.split('.')[-1].lower() != "svg":
+		print(
+			"Wrong input, when drawio is true, the input must be a svg file...")
+		exit()
+	convert(file_path)
+	cleanup()
+
+def get_file_names() -> List[str]:
+	"""gets the input file names as a list of strings
+
+	Returns:
+		List[str]: input file names
+	"""
+	return [s for i, s in enumerate(sys.argv) if i != 0]
+
+def cleanup() -> None:
+	# remove {temp_dir} folder
+	shutil.rmtree(f"{temp_dir}")
+	print(green("cleanup done..."))
+
+def main():
+    
+	# get file names
+	file_names = get_file_names()
+ 
+	for fn in file_names:
+		svg2latex(fn)
+
+if __name__ == "__main__":
+	main()

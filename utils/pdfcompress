@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+
+import sys
+import subprocess
+
+print("compressing...")
+print("this program requires ghost script. Install by:")
+print("sudo apt install ghostscript")
+
+bash_cmds = []
+
+for f in sys.argv[1:]:
+	f_name = f.split('.')[0]
+	bash_cmds.append(f"gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
+	-dNOPAUSE -dQUIET -dBATCH -sOutputFile={f_name}-comp.pdf {f}")
+
+for cmd in bash_cmds:
+	process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
+	output, error = process.communicate()
+	if not (len(output) == 0 and error == None):
+		print(output,error)

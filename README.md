@@ -123,7 +123,7 @@ plt.legend()
 plt.show()
 ```
 
-<img src="docs/plot-example.png" style="background-color:white" width="100%" float="right"/>
+<img src="docs/plot-example.png" style="background-color:white" width="80%" float="middle"/>
 
 If the generated ``example.pdf`` is too large, it can be compressed using 
 ```bash

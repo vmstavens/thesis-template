@@ -104,9 +104,9 @@ In these cases, the extra white space is caused by the text box of the inserted 
 
 To generate $\LaTeX$ compiled plots, ``matplotlib`` supports directly exporting to pdf. One example can be seen below
 
-<table style="width=100%; margin-left: auto; margin-right: auto; ">
-<tr>
-<td style="font-size:75%; margin:0px; padding:0px;">
+<div style="display: flex; width=100%; margin-left: auto; margin-right: auto; ">
+
+<div style="font-size:75%; margin:0px; padding:0px;">
 
 ```python
 import matplotlib.pyplot as plt
@@ -126,10 +126,10 @@ plt.legend()
 
 plt.show()
 ```
-</td>
-<td><img src="docs/plot.png" width="90%" style="background-color:white; margin:0px; padding:0px"/></td>
+</div>
+<div><img src="docs/plot.png" width="90%" style="background-color:white; margin:0px; padding:0px"/></div>
 
-</table>
+</div>
 
 If the generated ``example.pdf`` is too large, it can be compressed using 
 ```bash

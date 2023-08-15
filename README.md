@@ -108,7 +108,8 @@ To generate $\LaTeX$ compiled plots, ``matplotlib`` supports directly exporting 
 <!-- <div style="width=100%; margin-left: auto; margin-right: auto; "> -->
 
 
-<div style="font-size:75%" width="48%" float="left">
+<div width="48%" float="left">
+<!-- <div style="font-size:75%" width="48%" float="left"> -->
 <!-- <div style="font-size:75%; margin:0px; padding:0px;" width="48%" > -->
 <!-- <div style="font-size:75%; margin:0px; padding:0px; width: 48%; float:middle;" width="48%" > -->
 

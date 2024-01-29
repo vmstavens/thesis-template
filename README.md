@@ -102,7 +102,11 @@ Below is an example generated in draw.io
 
 In these cases, the extra white space is caused by the text box of the inserted text. This can be cropped using Inkscape. 
 
-To generate $\LaTeX$ compiled plots, ``matplotlib`` supports directly exporting to pdf. One example can be seen below
+To generate $\LaTeX$ compiled plots, ``matplotlib`` supports directly exporting to pdf. First install $\LaTeX$
+```bash
+sudo apt install cm-super texlive-latex-extra
+```
+One example can be seen below
 
 ```python
 import matplotlib.pyplot as plt
